@@ -1,0 +1,11 @@
+@import "reset-css";
+
+@import './Navigation/Navigation';
+@import './Home/Home';
+@import './Articles/Articles';
+@import './Forum/Forum';
+
+html{
+    font-family: 'Share Tech', sans-serif;
+    scroll-behavior: smooth;
+}
