@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React from 'react';
 import {
   HashRouter as Router,
   Switch,
@@ -10,25 +10,9 @@ import Articles from './Articles/Articles';
 import Forum from './Forum/Forum';
 import Login from './Login';
 import Register from './Register';
-
-import {FirebaseContext} from "./Firebase/FirebaseIndex"
-import {ProvideAuth} from "./Firebase/ProvideAuth"
+import Profile from './Profile/Profile';
 
 export default function App() {
-
-  const {fbauth} = useContext(FirebaseContext);
-  const [ ,setAuthUser] = useContext(ProvideAuth);
-
-  useEffect(() => {
-    fbauth.onAuthStateChanged(user => {
-      if (user) {
-          setAuthUser(user);
-      } else {
-          setAuthUser(null);
-      }
-    });
-  }, [fbauth, setAuthUser])
-
   return (
     <Router>
       <Switch>
@@ -37,6 +21,7 @@ export default function App() {
         <Route exact path="/forum" component={Forum} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/profile" component={Profile} />
       </Switch>
     </Router>
   )

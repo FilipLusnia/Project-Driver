@@ -57,6 +57,12 @@
     color: white;
     display: flex;
     justify-content: center;
+    max-height: 20px;
+    white-space: nowrap;
+
+    &:nth-child(4){
+        color: rgb(100, 207, 73);
+    }
 
     &:last-child{
         color: rgb(255, 58, 58);
@@ -88,6 +94,6 @@
 }
 
 .nav_decor{
-    width: 90%;
+    width: 91%;
     border-top: 1px solid white;
 }

@@ -6,6 +6,16 @@
 @import './Forum/Forum';
 
 html{
-    font-family: 'Share Tech', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
     scroll-behavior: smooth;
+}
+
+.splash_screen{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(34, 37, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
