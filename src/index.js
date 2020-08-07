@@ -52,7 +52,7 @@ const rrfProps = {
 
 function AuthIsLoaded({ children }) {
   const fbauth = useSelector(state => state.firebase.auth)
-  if (isLoaded(fbauth)){ 
+  if (!isLoaded(fbauth)){ 
     return (
       <div className="splash_screen">
         <div className="nav_logo_text">PROJECT: <br/> <span>_DRIVER</span></div>
