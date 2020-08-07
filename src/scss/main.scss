@@ -16,6 +16,11 @@ html{
     overflow: hidden;
     background-color: rgb(34, 37, 46);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    div{
+        margin-bottom: 20px;
+    }
 }

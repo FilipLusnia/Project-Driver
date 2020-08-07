@@ -2,18 +2,24 @@ import * as serviceWorker from './serviceWorker';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import { Provider, useSelector } from 'react-redux';
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from './components/Redux/Reducers';
 import thunk from 'redux-thunk';
-import { createFirestoreInstance, getFirestore, reduxFirestore } from "redux-firestore";
-import { ReactReduxFirebaseProvider, getFirebase, isLoaded } from "react-redux-firebase";
+import { createFirestoreInstance } from "redux-firestore";
+import { 
+  ReactReduxFirebaseProvider, 
+  getFirebase, 
+  isLoaded 
+} from "react-redux-firebase";
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore'
 
 import './scss/main.scss';
+import Loader from 'react-loader-spinner';
 
 import App from './components/App';
 
@@ -32,10 +38,7 @@ firebase.firestore();
 
 const store = createStore(
   rootReducer,
-  compose(
-    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reduxFirestore(config)
-  )
+  compose(applyMiddleware(thunk.withExtraArgument({ getFirebase })))
 );
 
 const rrfProps = {
@@ -49,10 +52,15 @@ const rrfProps = {
 
 function AuthIsLoaded({ children }) {
   const fbauth = useSelector(state => state.firebase.auth)
-  if (!isLoaded(fbauth)){ 
+  if (isLoaded(fbauth)){ 
     return (
       <div className="splash_screen">
         <div className="nav_logo_text">PROJECT: <br/> <span>_DRIVER</span></div>
+        <Loader
+          type="Circles"
+          color="#a6b2d4"
+          height={80}
+        />
       </div>
     )
   }
