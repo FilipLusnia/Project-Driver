@@ -80,19 +80,19 @@ function Login(props) {
                     <form className="login_form">
                         <h1>Zaloguj się</h1>
                         <div className="login_form_inputs">
-                            <label className="login_form_label-email">
+                            <label className="login_form_label">
                                 Email:
                                 <div>
                                     <input type="email" onChange={e=> setEmailVal(e.target.value)} 
-                                        style={emailBorder} className="login_form_input-email"/>
+                                        style={emailBorder} className="login_form_input"/>
                                     <p style={errStyle}>{emailErr}</p>
                                 </div>
                             </label>
-                            <label className="login_form_label-password">
+                            <label className="login_form_label">
                                 Hasło:
                                 <div>
                                     <input type="text" onChange={e=> setPasswordVal(e.target.value)} 
-                                        style={passwordBorder} className="login_form_input-password"/>
+                                        style={passwordBorder} className="login_form_input"/>
                                     <p style={errStyle}>{passwordErr}</p>
                                 </div>
                             </label>

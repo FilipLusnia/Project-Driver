@@ -109,40 +109,56 @@ function Register(props) {
     return (
         <>
             <Navigation/>
-            <div>
-                <div>
-                    <h1>Załóż konto</h1>
-                    <form>
-                        <div>
-                            <label>
+            <div className="register_container">
+                <h1>Wspaniale, że do nas dołączasz.</h1>
+                <div className="register_form_container">
+                    <form className="register_form">
+                        <h1>Załóż konto</h1>
+                        <div className="register_form_inputs">
+                            <label className="register_form_label">
                                 Email:
-                                <input type="email" onChange={e=> setEmailVal(e.target.value)} style={emailBorder}/>
-                                <p style={errStyle}>{emailErr}</p>
+                                <div>
+                                    <input type="email" onChange={e=> setEmailVal(e.target.value)} 
+                                        style={emailBorder} className="register_form_input"/>
+                                    <p style={errStyle}>{emailErr}</p>
+                                </div>
                             </label>
-                            <label>
+                            <label className="register_form_label">
                                 Hasło:
-                                <input type="text" onChange={e=> setPasswordVal(e.target.value)} style={passwordBorder}/>
-                                <p style={errStyle}>{passwordErr}</p>
+                                <div>
+                                    <input type="text" onChange={e=> setPasswordVal(e.target.value)} 
+                                        style={passwordBorder} className="register_form_input"/>
+                                    <p style={errStyle}>{passwordErr}</p>
+                                </div>
                             </label>
-                            <label>
+                            <label className="register_form_label">
                                 Powtórz hasło:
-                                <input type="text" onChange={e=> setPassword2Val(e.target.value)} style={password2Border}/>
-                                <p style={errStyle}>{password2Err}</p>
+                                <div>
+                                    <input type="text" onChange={e=> setPassword2Val(e.target.value)} 
+                                        style={password2Border} className="register_form_input"/>
+                                    <p style={errStyle}>{password2Err}</p>
+                                </div>
                             </label>
-                            <label>
+                            <label className="register_form_label">
                                 Imię:
-                                <input type="text" onChange={e=> setNameVal(e.target.value)} style={nameBorder}/>
-                                <p style={errStyle}>{nameErr}</p>
+                                <div>
+                                    <input type="text" onChange={e=> setNameVal(e.target.value)} 
+                                        style={nameBorder} className="register_form_input"/>
+                                    <p style={errStyle}>{nameErr}</p>
+                                </div>
                             </label>
-                            <label>
+                            <label className="register_form_label">
                                 Nazwisko:
-                                <input type="text" onChange={e=> setSurnameVal(e.target.value)} style={surnameBorder}/>
-                                <p style={errStyle}>{surnameErr}</p>
+                                <div>
+                                    <input type="text" onChange={e=> setSurnameVal(e.target.value)} 
+                                        style={surnameBorder} className="register_form_input"/>
+                                    <p style={errStyle}>{surnameErr}</p>
+                                </div>
                             </label>
                         </div>
-                        <div>
-                            <Link to="/login">Zaloguj</Link>
-                            <input type="submit" value="Załóż konto" onClick={handleClick}/>
+                        <div className="register_form_buttons">
+                            <input type="submit" value="Załóż konto" onClick={handleClick} className="register_form_registerbtn"/>
+                            <Link to="/login" className="register_form_loginbtn">Masz już konto?</Link>
                         </div>
                     </form>
                 </div>
