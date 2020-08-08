@@ -1,0 +1,127 @@
+.login_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 600px;
+    height: calc(100vh - 200px);
+    margin-top: 40px;
+
+    h1{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+.login_form_container{
+    background-color: rgb(29, 29, 29);
+    background-image: url(../resources/login-background.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px 5px rgba(0, 0, 0, 0.534);
+}
+
+.login_form{
+    transform: translate(60%, 0);
+    width: 350px;
+    text-align: center;
+}
+.login_form_inputs{
+
+}
+.login_form_label-email{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    font-size: 20px;
+    height: 65px;
+
+    p{
+        font-size: 15px;
+    }
+}
+.login_form_label-password{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    font-size: 20px;
+    height: 65px;
+
+    p{
+        font-size: 15px;
+    }
+}
+.login_form_input-email{
+    background: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin: 15px 20px 5px;
+    height: 25px;
+    outline: none;
+    color: white;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 20px;
+    transition: 0.4s;
+
+    &:focus{
+        transform: scale(1.05);
+    }
+}
+.login_form_input-password{
+    background: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin: 15px 20px 5px;
+    height: 25px;
+    outline: none;
+    color: white;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 20px;
+    transition: 0.4s;
+
+    &:focus{
+        transform: scale(1.05);
+    }
+}
+.login_form_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_form_loginbtn{
+    font-family: 'Ropa Sans', sans-serif;
+    width: 150px;
+    min-height: 30px;
+    margin: 20px 0;
+    background-color: rgb(85, 83, 117);
+    border-radius: 10px;
+    color: white;
+    transition: 0.1s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover{
+        transform: translate(0, -2px);
+    }
+
+    &:active{
+        background-color: rgb(128, 125, 175);  
+    }
+}
+.login_form_registerbtn{
+    margin-top: 10px;
+    color: rgb(92, 92, 92);
+
+    &:hover{
+        color: rgb(72, 109, 209);
+    }
+}

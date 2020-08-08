@@ -1,0 +1,55 @@
+.guestHome_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+    height: calc(100vh - 200px);
+    color: white;
+    text-align: center;
+}
+
+.guestHome_title{
+    margin-top: 70px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.guestHome_title_secondary{
+    margin: 120px 0 80px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.guestHome_btntitle{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.guestHome_registerbtn{
+    background-color: rgb(85, 83, 117);
+    width: 220px;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    transition: 0.1s;
+
+    &:hover{
+        transform: translate(0, -2px);
+    }
+
+    &:active{
+        background-color: rgb(128, 125, 175);  
+    }
+}
+.guestHome_loginbtn{
+    margin-top: 10px;
+    color: rgb(92, 92, 92);
+
+    &:hover{
+        color: rgb(72, 109, 209);
+    }
+}

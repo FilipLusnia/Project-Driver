@@ -44,7 +44,8 @@ const store = createStore(
 const rrfProps = {
   firebase,
   config: {
-    useFirestoreForProfile: true
+    useFirestoreForProfile: true,
+    userProfile: 'users'
   },
   dispatch: store.dispatch,
   createFirestoreInstance

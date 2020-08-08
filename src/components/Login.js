@@ -74,25 +74,32 @@ function Login(props) {
     return (
         <div>
             <Navigation/>
-            <div>
-                <div>
-                    <h1>Zaloguj się</h1>
-                    <form>
-                        <div >
-                            <label>
+            <div className="login_container">
+                <h1>Witaj z powrotem.</h1>
+                <div className="login_form_container">
+                    <form className="login_form">
+                        <h1>Zaloguj się</h1>
+                        <div className="login_form_inputs">
+                            <label className="login_form_label-email">
                                 Email:
-                                <input type="email" onChange={e=> setEmailVal(e.target.value)} style={emailBorder}/>
-                                <p style={errStyle}>{emailErr}</p>
+                                <div>
+                                    <input type="email" onChange={e=> setEmailVal(e.target.value)} 
+                                        style={emailBorder} className="login_form_input-email"/>
+                                    <p style={errStyle}>{emailErr}</p>
+                                </div>
                             </label>
-                            <label>
+                            <label className="login_form_label-password">
                                 Hasło:
-                                <input type="text" onChange={e=> setPasswordVal(e.target.value)} style={passwordBorder}/>
-                                <p style={errStyle}>{passwordErr}</p>
+                                <div>
+                                    <input type="text" onChange={e=> setPasswordVal(e.target.value)} 
+                                        style={passwordBorder} className="login_form_input-password"/>
+                                    <p style={errStyle}>{passwordErr}</p>
+                                </div>
                             </label>
                         </div>
-                        <div>
-                            <Link to="/register">Załóż konto</Link>
-                            <input type="submit" value="Zaloguj się" onClick={handleClick}/>
+                        <div className="login_form_buttons">
+                            <input type="submit" value="Zaloguj się" onClick={handleClick} className="login_form_loginbtn"/>
+                            <Link to="/register" className="login_form_registerbtn">Nie masz jeszcze konta?</Link>
                         </div>
                     </form>
                 </div>

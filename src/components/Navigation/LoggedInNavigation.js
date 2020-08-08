@@ -5,7 +5,7 @@ import {
 import { connect } from 'react-redux';
 import { signOut } from '../Redux/Actions/FBauthActions';
 
-import logo from '../../scss/Navigation/PD-logo.svg';
+import logo from '../../resources/PD-logo.svg';
 
 function LoggedInNavigation(props) {
 

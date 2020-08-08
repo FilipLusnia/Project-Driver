@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import {connect} from 'react-redux';
 
-import logo from '../../scss/Navigation/PD-logo.svg';
+import logo from '../../resources/PD-logo.svg';
 
 function LoggedOutNavigation() {
 

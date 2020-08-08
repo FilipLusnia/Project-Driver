@@ -1,13 +1,31 @@
 import React from 'react';
 import Navigation from '../Navigation/Navigation';
+import GuestHome from './GuestHome';
+import LoggedHome from './LoggedHome';
+import {connect} from 'react-redux';
 
-export default function Home() {
+function Home(props) {
 
+  const {fbauth} = props;
 
-  return (
-    <>
-      <Navigation/>
-      home    
-    </>
+  return(
+    fbauth.uid ? 
+        <>
+          <Navigation/>
+          <LoggedHome/>
+        </>
+    :
+        <>
+          <Navigation/>
+          <GuestHome/>
+        </>
   )
 }
+
+const mapStateToProps = state => {
+  return{
+    fbauth: state.firebase.auth
+  }
+}
+
+export default connect(mapStateToProps)(Home)

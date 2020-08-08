@@ -1,13 +1,20 @@
 @import "reset-css";
 
 @import './Navigation/Navigation';
-@import './Home/Home';
+@import './Home/LoggedHome';
+@import './Home/GuestHome';
 @import './Articles/Articles';
 @import './Forum/Forum';
+@import './Login';
 
 html{
     font-family: 'Ropa Sans', sans-serif;
     scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+    color: white;
 }
 
 .splash_screen{
