@@ -181,7 +181,6 @@ function Register(props) {
 
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
       fbauth: state.firebase.auth,
       authError: state.FBauthReducer.authError
