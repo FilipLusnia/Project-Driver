@@ -26,13 +26,16 @@ function Register(props) {
     const [password2Err, setPassword2Err] = useState("");
     const [nameErr, setNameErr] = useState("");
     const [surnameErr, setSurnameErr] = useState("");
+    const [fbResponseErr, setfbResponseErr] = useState();
     const [err, setErr] = useState(false);
 
+    //style states
     const [emailBorder, setEmailBorder] = useState();
     const [passwordBorder, setPasswordBorder] = useState();
     const [password2Border, setPassword2Border] = useState();
     const [nameBorder, setNameBorder] = useState();
     const [surnameBorder, setSurnameBorder] = useState();
+
     const errStyle = {color: "red"};
     const errBorder = {borderColor: "red"};
 
@@ -47,6 +50,14 @@ function Register(props) {
         } else {
             setErr(false);
         } 
+
+        if(props.authError){
+            if(props.authError === "The email address is badly formatted."){
+                setfbResponseErr("Email ma niepoprawny format.")
+            } 
+        } else {
+            setfbResponseErr(null)
+        }
 
         if(fbauth.uid){
             history.push('/')
@@ -114,6 +125,7 @@ function Register(props) {
                 <div className="register_form_container">
                     <form className="register_form">
                         <h1>Załóż konto</h1>
+                        <h3 style={errStyle}>{fbResponseErr}</h3>
                         <div className="register_form_inputs">
                             <label className="register_form_label">
                                 Email:
@@ -169,8 +181,10 @@ function Register(props) {
 
 
 const mapStateToProps = state => {
+    console.log(state)
     return {
-      fbauth: state.firebase.auth
+      fbauth: state.firebase.auth,
+      authError: state.FBauthReducer.authError
     }
 }
 

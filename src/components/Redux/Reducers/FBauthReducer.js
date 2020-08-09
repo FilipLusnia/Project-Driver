@@ -12,7 +12,7 @@ export const FBauthReducer = (state = initState, action) => {
         case 'LOGIN_FAIL':
             return {
                 ...state, 
-                authError: 'Login failed'
+                authError: action.err.message
             }
 
 

@@ -20,7 +20,10 @@ function Login(props) {
 
     const [emailErr, setEmailErr] = useState("");
     const [passwordErr, setPasswordErr] = useState("");
+    const [fbResponseErr, setfbResponseErr] = useState();
     const [err, setErr] = useState(false);
+
+    //style states
     const [emailBorder, setEmailBorder] = useState();
     const [passwordBorder, setPasswordBorder] = useState();
 
@@ -37,11 +40,21 @@ function Login(props) {
             setErr(false);
         }
 
+        if(props.authError){
+            if(props.authError === "There is no user record corresponding to this identifier. The user may have been deleted."){
+                setfbResponseErr("Ten email nie jest przypisany do żadnego konta.")
+            } else if(props.authError === "The password is invalid or the user does not have a password."){
+                setfbResponseErr("Nie prawidłowe hasło.")
+            }
+        } else {
+            setfbResponseErr(null)
+        }
+
         if(fbauth.uid){
             history.push('/')
         }
 
-    }, [emailVal, passwordVal, err, history, fbauth.uid]);
+    }, [emailVal, passwordVal, err, history, fbauth.uid, props.authError]);
 
 
     const handleClick = (e)=> {
@@ -79,6 +92,7 @@ function Login(props) {
                 <div className="login_form_container">
                     <form className="login_form">
                         <h1>Zaloguj się</h1>
+                        <h3 style={errStyle}>{fbResponseErr}</h3>
                         <div className="login_form_inputs">
                             <label className="login_form_label">
                                 Email:
@@ -110,7 +124,8 @@ function Login(props) {
 
 const mapStateToProps = state => {
     return {
-      fbauth: state.firebase.auth
+      fbauth: state.firebase.auth,
+      authError: state.FBauthReducer.authError
     }
 }
 
