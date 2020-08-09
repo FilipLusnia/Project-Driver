@@ -27,7 +27,7 @@
 }
 
 .login_form{
-    transform: translate(60%, 0);
+    transform: translate(57%, 0);
     width: 350px;
     text-align: center;
 }
@@ -46,18 +46,45 @@
         font-size: 15px;
     }
 }
-.login_form_input{
+.login_form_input-email{
     background: none;
     border: none;
     width: 100%;
     border-bottom: 1px solid white;
-    margin: 15px 20px 5px;
-    height: 25px;
+    margin: 5px 15px;
+    height: 20px;
     outline: none;
     color: white;
+    position: relative;
     font-family: 'Ropa Sans', sans-serif;
     font-size: 20px;
     transition: 0.4s;
+    background-image: url(../resources/mail-icon.png);
+    padding-left: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:focus{
+        transform: scale(1.05);
+    }
+}
+.login_form_input-password{
+    background: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin: 5px 15px;
+    height: 20px;
+    outline: none;
+    color: white;
+    position: relative;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 20px;
+    transition: 0.4s;
+    background-image: url(../resources/key-icon.png);
+    padding-left: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     &:focus{
         transform: scale(1.05);
@@ -70,8 +97,8 @@
 }
 .login_form_loginbtn{
     font-family: 'Ropa Sans', sans-serif;
-    width: 150px;
-    min-height: 30px;
+    width: 160px;
+    min-height: 35px;
     margin: 20px 0;
     background-color: rgb(85, 83, 117);
     border-radius: 10px;
@@ -80,17 +107,19 @@
     border: none;
     outline: none;
     cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.267);
 
     &:hover{
         transform: translate(0, -2px);
+        background-color: rgb(120, 117, 165);  
     }
 
     &:active{
-        background-color: rgb(128, 125, 175);  
+        transform: translate(0, 0);
     }
 }
 .login_form_registerbtn{
-    margin-top: 10px;
+    font-size: 13px;
     color: rgb(92, 92, 92);
 
     &:hover{

@@ -98,7 +98,7 @@ function Login(props) {
                                 Email:
                                 <div>
                                     <input type="email" onChange={e=> setEmailVal(e.target.value)} 
-                                        style={emailBorder} className="login_form_input"/>
+                                        style={emailBorder} className="login_form_input-email"/>
                                     <p style={errStyle}>{emailErr}</p>
                                 </div>
                             </label>
@@ -106,7 +106,7 @@ function Login(props) {
                                 Hasło:
                                 <div>
                                     <input type="text" onChange={e=> setPasswordVal(e.target.value)} 
-                                        style={passwordBorder} className="login_form_input"/>
+                                        style={passwordBorder} className="login_form_input-password"/>
                                     <p style={errStyle}>{passwordErr}</p>
                                 </div>
                             </label>
@@ -131,7 +131,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        signIn: creds => dispatch(signIn(creds)),
+        signIn: creds => dispatch(signIn(creds))
     }
 }
 

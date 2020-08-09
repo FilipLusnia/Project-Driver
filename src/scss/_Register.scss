@@ -70,8 +70,8 @@
 }
 .register_form_registerbtn{
     font-family: 'Ropa Sans', sans-serif;
-    width: 150px;
-    min-height: 30px;
+    width: 160px;
+    min-height: 35px;
     margin: 20px 0;
     background-color: rgb(85, 83, 117);
     border-radius: 10px;
@@ -80,17 +80,19 @@
     border: none;
     outline: none;
     cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.267);
 
     &:hover{
         transform: translate(0, -2px);
+        background-color: rgb(120, 117, 165);  
     }
 
     &:active{
-        background-color: rgb(128, 125, 175);  
+        transform: translate(0, 0);
     }
 }
 .register_form_loginbtn{
-    margin-top: 10px;
+    font-size: 13px;
     color: rgb(92, 92, 92);
 
     &:hover{

@@ -189,7 +189,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        signUp: creds => dispatch(signUp(creds)),
+        signUp: creds => dispatch(signUp(creds))
     }
 }
 
