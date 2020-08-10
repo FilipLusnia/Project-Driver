@@ -63,7 +63,7 @@ function Register(props) {
             history.push('/')
         }
 
-    }, [emailVal, passwordVal, password2Val, err, history, fbauth.uid]);
+    }, [emailVal, passwordVal, password2Val, err, history, fbauth.uid, props.authError]);
 
     const handleClick = (e)=> {
         e.preventDefault();
@@ -126,7 +126,7 @@ function Register(props) {
                     <form className="register_form">
                         <h1>Załóż konto</h1>
                         <h3 style={errStyle}>{fbResponseErr}</h3>
-                        <div className="register_form_inputs">
+                        <div>
                             <label className="register_form_label">
                                 Email:
                                 <div>

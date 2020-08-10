@@ -39,7 +39,8 @@ export const signUp = creds => {
         .then((resp) => {
             return firestore.collection('users').doc(resp.user.uid).set({
                 name: creds.nameVal,
-                surname: creds.surnameVal
+                surname: creds.surnameVal,
+                points: 0
             })
         })
         .then(() => dispatch({
@@ -47,6 +48,25 @@ export const signUp = creds => {
         }))
         .catch(err => dispatch({
             type: 'SIGN_FAIL', 
+            err
+        }))
+    }
+}
+
+export const deleteAcc = () => {
+    return (dispatch, getState, {getFirebase}) => {
+        const firebase = getFirebase();
+        const firestore = firebase.firestore();
+        const currentUser = firebase.auth().currentUser;
+
+        firestore.collection('users').doc(currentUser.uid).delete()
+        .then(firebase.auth().currentUser.delete())
+        .then(signOut())
+        .then(() => dispatch({
+            type: 'ACC_DELETED'
+        }))
+        .catch(err => dispatch({
+            type: 'ACC_DELETE_FAIL', 
             err
         }))
     }

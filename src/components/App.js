@@ -12,7 +12,7 @@ import Login from './Login';
 import Register from './Register';
 import Profile from './Profile/Profile';
 
-export default function App() {
+export default function App(){
   return (
     <Router>
       <Switch>

@@ -33,6 +33,18 @@ export const FBauthReducer = (state = initState, action) => {
             
         default:
             return state;
+
+        
+        case 'ACC_DELETED':
+            return {
+                ...state, 
+                authError: null
+            }
+        case 'ACC_DELETE_FAIL':
+            return {
+                ...state, 
+                authError: action.err.message
+            }
     } 
 }
 

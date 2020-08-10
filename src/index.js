@@ -52,14 +52,17 @@ const rrfProps = {
 }
 
 function AuthIsLoaded({ children }) {
-  const fbauth = useSelector(state => state.firebase.auth)
-  if (!isLoaded(fbauth)){ 
+  const fbauth = useSelector(state => state.firebase.auth);
+  const fbprofile = useSelector(state => state.firebase.profile);
+  
+
+  if (!isLoaded(fbauth && fbprofile)){ 
     return (
       <div className="splash_screen">
         <div className="nav_logo_text">PROJECT: <br/> <span>_DRIVER</span></div>
         <Loader
           type="Circles"
-          color="#a6b2d4"
+          color="#5365ff"
           height={80}
         />
       </div>

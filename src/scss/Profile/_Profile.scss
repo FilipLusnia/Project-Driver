@@ -1,0 +1,74 @@
+.profile_container{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_leftside{
+    height: 500px;
+    width: 30%;
+    background-color: rgb(29, 29, 29);
+    margin: 0 10px;
+    border-radius: 15% 0 0 15%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.profile_rightside{
+    height: 500px;
+    width: 50%;
+    background-color: rgb(29, 29, 29);
+    margin: 0 10px;
+    border-radius: 0 15% 15% 0;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+
+    h2{
+        margin-top: 20px;
+        margin-bottom: 110px;
+        font-size: 40px;
+    }
+
+    li{
+        margin-bottom: 50px;
+    }
+}
+.profile_picture{
+    height: 200px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.384);
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.profile_delete_btn{
+    margin-top: 60px;
+    font-family: 'Ropa Sans', sans-serif;
+    width: 160px;
+    min-height: 35px;
+    background-color: rgb(197, 52, 52);
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.267);
+
+    &:hover{
+        transform: translate(0, -2px);
+        background-color: rgb(255, 0, 0);  
+    }
+
+    &:active{
+        transform: translate(0, 0);
+    }
+}

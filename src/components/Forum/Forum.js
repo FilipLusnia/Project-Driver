@@ -7,7 +7,7 @@ export default function Forum() {
   return (
     <>
       <Navigation/>
-      forum
+      forum WIP
     </>
   )
 }

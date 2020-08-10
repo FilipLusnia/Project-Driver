@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 700px;
+    min-height: 600px;
     margin-top: 40px;
 
     h1{
@@ -31,9 +31,6 @@
     width: 350px;
     text-align: center;
 }
-.login_form_inputs{
-
-}
 .login_form_label{
     display: flex;
     align-items: center;
@@ -46,7 +43,7 @@
         font-size: 15px;
     }
 }
-.login_form_input-email{
+.login_form_input{
     background: none;
     border: none;
     width: 100%;
@@ -59,30 +56,6 @@
     font-family: 'Ropa Sans', sans-serif;
     font-size: 20px;
     transition: 0.4s;
-    background-image: url(../resources/mail-icon.png);
-    padding-left: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    &:focus{
-        transform: scale(1.05);
-    }
-}
-.login_form_input-password{
-    background: none;
-    border: none;
-    width: 100%;
-    border-bottom: 1px solid white;
-    margin: 5px 15px;
-    height: 20px;
-    outline: none;
-    color: white;
-    position: relative;
-    font-family: 'Ropa Sans', sans-serif;
-    font-size: 20px;
-    transition: 0.4s;
-    background-image: url(../resources/key-icon.png);
-    padding-left: 30px;
     background-size: contain;
     background-repeat: no-repeat;
 

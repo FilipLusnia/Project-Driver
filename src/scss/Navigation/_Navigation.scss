@@ -8,8 +8,12 @@
     box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.61);
     position: relative;
 }
-
-
+.nav_top{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 .nav_logo_container{
     display: flex;
     align-items: center;
@@ -98,4 +102,32 @@
 .nav_decor{
     width: 91%;
     border-top: 1px solid white;
+}
+
+.profileinfo_container{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 170px;
+    height: 100px;
+    background-color: rgb(62, 75, 190);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+    right: 0;
+    position: absolute;
+    margin-right: 30px;
+    margin-top: 20px;
+
+    p{
+        margin: 10px 0;
+    }
+}
+.profileinfo_picture{
+    height: 60px;
+}
+.profileinfo_points{
+    font-weight: 600;
+    letter-spacing: 1px;
 }

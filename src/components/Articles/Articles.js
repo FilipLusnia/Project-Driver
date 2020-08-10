@@ -7,7 +7,7 @@ export default function Articles() {
   return (
     <>
       <Navigation/>
-      articles
+      articles WIP
     </>
   )
 }
