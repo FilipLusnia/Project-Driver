@@ -55,7 +55,6 @@ function AuthIsLoaded({ children }) {
   const fbauth = useSelector(state => state.firebase.auth);
   const fbprofile = useSelector(state => state.firebase.profile);
   
-
   if (!isLoaded(fbauth && fbprofile)){ 
     return (
       <div className="splash_screen">
