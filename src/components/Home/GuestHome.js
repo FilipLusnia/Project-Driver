@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function GuestHome() {
 
-
   return (
     <div className="guestHome_container">
       <h1 className="guestHome_title">Witaj w Project: Driver</h1>

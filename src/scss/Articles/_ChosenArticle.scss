@@ -7,9 +7,10 @@
 .chosen_article_title{
     text-transform: uppercase;
     width: 50vw;
-    font-size: 50px;
+    font-size: 45px;
     margin-top: 70px;
     font-family: 'Merriweather', sans-serif;
+    line-height: 50px;
 }
 .chosen_article_thumbtext{
     width: 50vw;
@@ -29,4 +30,71 @@
     font-size: 20px;
     margin-top: 50px;
     text-align: left;
+}
+.chosen_article_bottomtext{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.chosen_article_quizbtn{
+    font-family: 'Ropa Sans', sans-serif;
+    animation: pulseButton 2.5s infinite;
+    width: 190px;
+    min-height: 50px;
+    background-color: rgb(103, 101, 141); 
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    color: white;
+    transition: 0.2s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.267);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        background-color: rgb(173, 175, 199);
+        animation: pulseButton 1s infinite;  
+    }
+}
+
+@keyframes pulseButton {
+	0% {
+		box-shadow: 0 0 5px rgba(rgb(0, 0, 0), 0.3);
+	}
+
+	50% {
+		box-shadow: 0 0 20px 5px rgba(212, 212, 212, 0.3);
+	}
+
+	100% {
+		box-shadow: 0 0 5px rgba(rgb(0, 0, 0), 0.3);
+	}
+}
+.chosen_article_loginbtn{
+    font-family: 'Ropa Sans', sans-serif;
+    width: 190px;
+    min-height: 50px;
+    background-color: rgb(103, 101, 141); 
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    transition: 0.2s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.267);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        background-color: rgb(120, 117, 165);  
+    }
 }

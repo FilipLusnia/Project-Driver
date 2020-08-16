@@ -10,9 +10,8 @@ import Navigation from './Navigation/Navigation';
 
 
 function Login(props) {
-
+    
     const {fbauth} = props;
-
     const history = useHistory();
 
     const [emailVal, setEmailVal] = useState("");

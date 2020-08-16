@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 function LoggedHome(props) {
 
-
   return (
     <div className="loggedHome_container">
       <h1 className="loggedHome_title">

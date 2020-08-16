@@ -12,7 +12,6 @@ import Navigation from './Navigation/Navigation';
 function Register(props) {
 
     const {fbauth} = props;
-
     const history = useHistory();
 
     const [emailVal, setEmailVal] = useState("");

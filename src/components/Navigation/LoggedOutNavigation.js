@@ -18,7 +18,7 @@ function LoggedOutNavigation() {
       <div className="nav_links_container">
         <div className="nav_links">
           <Link to="/" className="nav_links_item">Strona główna</Link>
-          <Link to="/articles" className="nav_links_item">Artykuły</Link>
+          <Link to="/articles" className="nav_links_item">Artykuły<span>/</span>Quizy</Link>
           <Link to="/forum" className="nav_links_item">Forum</Link>
           <Link to="/login" className="nav_links_item">Zaloguj</Link>
           <Link to="/register" className="nav_links_item">Zarejestruj się</Link>
