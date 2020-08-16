@@ -123,15 +123,13 @@
 .profileinfo_picture{
     height: 60px;
 }
-.profileinfo_points{
-    font-weight: 600;
-    letter-spacing: 3px;
-    margin-top: 5px;
-    color: rgb(97, 113, 255);
-}
 .profileinfo_level{
-    margin-top: 20px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: rgb(255, 58, 58);
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(185, 255, 94);
+}
+.profileinfo_points{
+    margin-top: 2px;
+    font-size: 14px;
+    color: rgb(97, 113, 255);
 }

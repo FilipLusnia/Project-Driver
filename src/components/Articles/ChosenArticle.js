@@ -5,18 +5,29 @@ import {firestoreConnect} from 'react-redux-firebase';
 
 import Navigation from '../Navigation/Navigation';
 
+import Loader from 'react-loader-spinner';
+
 
 function ChosenArticle(props) {
-
-  const {fbauth} = props;
+  
+  const {fbauth, articles} = props;
   const articleName = props.match.params.articlename;
-
+  const currentArticle = articles?.[articleName]
 
   return (
     <>
-      <Navigation/>
-      <div>  
-          {articleName}
+    <Navigation/>
+      <div>
+        {
+        currentArticle ?
+          <p>{currentArticle.title}</p>
+          
+        :
+
+          <div className="article_list_loader">
+            <Loader type="Circles" color="#5365ff" height={80}/>
+          </div>
+        }
       </div>
     </>
   )
@@ -25,7 +36,7 @@ function ChosenArticle(props) {
 const mapStateToProps = state => {
   return {
     fbauth: state.firebase.auth,
-    articles: state.firestore.ordered.articles
+    articles: state.firestore.data.articles
   }
 }
   
