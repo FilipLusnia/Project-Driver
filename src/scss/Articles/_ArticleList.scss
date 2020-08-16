@@ -1,0 +1,19 @@
+.article_list_container{
+    min-height: 600px;
+    margin: 30px;
+}
+
+.article_list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.article_list_loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    height: calc(100vh - 200px);
+}

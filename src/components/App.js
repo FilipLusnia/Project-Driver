@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 
 import Home from './Home/Home';
-import Articles from './Articles/Articles';
+import ArticleList from './Articles/ArticleList';
+import ChosenArticle from './Articles/ChosenArticle';
 import Forum from './Forum/Forum';
 import Login from './Login';
 import Register from './Register';
@@ -17,7 +18,8 @@ export default function App(){
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/articles" component={Articles} />
+        <Route exact path="/articles" component={ArticleList} />
+        <Route path="/articles/chosenarticle/:articlename" component={ChosenArticle} />
         <Route exact path="/forum" component={Forum} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />

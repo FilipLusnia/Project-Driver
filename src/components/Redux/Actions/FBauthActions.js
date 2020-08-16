@@ -40,7 +40,8 @@ export const signUp = creds => {
             return firestore.collection('users').doc(resp.user.uid).set({
                 name: creds.nameVal,
                 surname: creds.surnameVal,
-                points: 0
+                points: 0,
+                level: 1
             })
         })
         .then(() => dispatch({

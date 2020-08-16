@@ -109,25 +109,29 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 170px;
-    height: 100px;
-    background-color: rgb(62, 75, 190);
+    width: 195px;
+    height: 105px;
+    background-color: rgb(65, 68, 97);
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 0 10px;
+    padding: 0 15px;
     right: 0;
     position: absolute;
     margin-right: 30px;
     margin-top: 20px;
-
-    p{
-        margin: 10px 0;
-    }
 }
 .profileinfo_picture{
     height: 60px;
 }
 .profileinfo_points{
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+    color: rgb(97, 113, 255);
+}
+.profileinfo_level{
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgb(255, 58, 58);
 }

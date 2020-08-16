@@ -7,8 +7,7 @@ function LoggedHome(props) {
   return (
     <div className="loggedHome_container">
       <h1 className="loggedHome_title">
-        Cześć, <span>{props.name}</span>!
-        Jak ci dziś mija dzień?
+        Jak ci dziś mija dzień, <span>{props.name}</span>?
       </h1>
 
       <div className="loggedHome_news_container">
