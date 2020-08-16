@@ -5,6 +5,7 @@
 @import './Home/GuestHome';
 @import './Articles/ArticleList';
 @import './Articles/ArticleItem';
+@import './Articles/ChosenArticle';
 @import './Forum/Forum';
 @import './Profile/Profile';
 @import './Login';
@@ -12,7 +13,6 @@
 
 html{
     font-family: 'Ropa Sans', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body{

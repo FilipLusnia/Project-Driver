@@ -1,0 +1,32 @@
+.chosen_article_container{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.chosen_article_title{
+    text-transform: uppercase;
+    width: 50vw;
+    font-size: 50px;
+    margin-top: 70px;
+    font-family: 'Merriweather', sans-serif;
+}
+.chosen_article_thumbtext{
+    width: 50vw;
+    font-size: 19px;
+    margin-top: 15px;
+    color: rgb(156, 156, 156);
+    font-family: 'Merriweather', sans-serif;
+}
+.chosen_article_img{
+    margin-top: 35px;
+    max-width: 50vw;
+}
+.chosen_article_text{
+    min-height: 300px;
+    font-family: 'Merriweather', sans-serif;
+    width: 50vw;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: left;
+}
