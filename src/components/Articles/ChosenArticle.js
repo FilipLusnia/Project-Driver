@@ -10,7 +10,7 @@ import Loader from 'react-loader-spinner';
 
 function ChosenArticle(props) {
   
-  const {fbauth, articles} = props;
+  const {articles} = props;
   const articleName = props.match.params.articlename;
   const currentArticle = articles?.[articleName]
 
