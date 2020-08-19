@@ -8,6 +8,9 @@ export const sendComment = (text, name) => {
             comment: text,
             date: new Date()
         })
+        .then(() => dispatch({
+            type: 'COMMENT_SEND_SUCCES'
+        }))
         .catch(err => dispatch({
             type: 'COMMENT_SEND_FAIL', 
             err
@@ -25,6 +28,9 @@ export const sendReply = (text, name, commId) => {
             reply: text,
             date: new Date()
         })
+        .then(() => dispatch({
+            type: 'REPLY_SEND_SUCCES'
+        }))
         .catch(err => dispatch({
             type: 'REPLY_SEND_FAIL', 
             err

@@ -4,6 +4,17 @@ const initState = {
 
 export const forumReducer = (state = initState, action) => {
     switch(action.type){
+        case 'REPLY_SEND_SUCCES':
+            return {
+                ...state, 
+                forumError: null
+            }
+        case 'COMMENT_SEND_SUCCES':
+            return {
+                ...state, 
+                forumError: null
+            }
+            
         case 'REPLY_SEND_FAIL':
             return {
                 ...state, 
