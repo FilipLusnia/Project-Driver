@@ -4,18 +4,26 @@ import {compose} from 'redux';
 import {firestoreConnect} from 'react-redux-firebase';
 
 function Reply({commentReplies}) {
-
   return (
     <ul>
-      {commentReplies?.map(e => (
-        <li 
-          key={e.reply}
-          className="forum_reply"
-        >
-          <p>{e.name}</p>
-          <p>{e.reply}</p>
-        </li>
-      )).reverse()}
+      {commentReplies ?
+        (commentReplies.length > 0) ?
+
+          commentReplies.map(e => (
+            <li 
+              key={e.reply}
+              className="forum_reply"
+            >
+              <p>{e.name}</p>
+              <p>{e.reply}</p>
+            </li>
+          )).reverse()
+        :
+          <p>Nikt jeszcze nie odpowiedział na ten post. Bądź pierwszy!</p>
+
+      :
+        null
+      }
     </ul>
   )
 }
