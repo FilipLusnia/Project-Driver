@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {signUp} from './Redux/Actions/FBauthActions';
 
 import Navigation from './Navigation/Navigation';
-
+import Footer from './Navigation/Footer';
 
 function Register(props) {
 
@@ -174,8 +174,9 @@ function Register(props) {
                     </form>
                 </div>
             </div>
+            <Footer/>
         </>
-    );
+    )
 }
 
 

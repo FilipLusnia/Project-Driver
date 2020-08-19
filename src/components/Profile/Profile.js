@@ -3,6 +3,7 @@ import {
   useHistory
 } from "react-router-dom";
 import Navigation from '../Navigation/Navigation';
+import Footer from '../Navigation/Footer';
 import icon from '../../resources/user-icon.png';
 import {connect} from 'react-redux';
 import {deleteAcc} from '../Redux/Actions/FBauthActions';
@@ -30,7 +31,7 @@ function Profile(props) {
           <img src={icon} alt="profile pic" className="profile_picture"></img>
           <p>{props.name}</p>
           <p>{props.surName}</p>
-          <button className="profile_delete_btn" onClick={handleClick}>Usuń konto WIP</button>
+          <button className="profile_delete_btn" onClick={handleClick}>Usuń konto (niedostępne)</button>
         </div>
         <div className="profile_rightside">
           <h2>TWÓJ PROFIL:</h2>
@@ -43,6 +44,7 @@ function Profile(props) {
           </ul>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

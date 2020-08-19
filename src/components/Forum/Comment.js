@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 
 import Reply from './Reply';
 
+import moment from 'moment';
 
-export default function Comment({comment, name, title, id}) {
+export default function Comment({comment, name, date, id}) {
 
   const [repliesHidden, setRepliesHidden] = useState(true);
 
@@ -21,7 +22,7 @@ export default function Comment({comment, name, title, id}) {
     <div className="forum_comment">
       <p>{comment}</p>
       <p>{name}</p>
-      <p>{title}</p>
+      <p>{moment(date.toDate()).calendar()}</p>
 
       { repliesHidden ?
         <button onClick={handleClick}>Pokaż komentarze...</button>

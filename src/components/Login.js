@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import {signIn} from './Redux/Actions/FBauthActions';
 
 import Navigation from './Navigation/Navigation';
+import Footer from './Navigation/Footer';
 
 
 function Login(props) {
@@ -84,7 +85,7 @@ function Login(props) {
     }
 
     return (
-        <div>
+        <>
             <Navigation/>
             <div className="login_container">
                 <h1>Witaj z powrotem.</h1>
@@ -117,8 +118,9 @@ function Login(props) {
                     </form>
                 </div>
             </div>
-        </div>
-    );
+            <Footer/>
+        </>
+    )
 }
 
 const mapStateToProps = state => {

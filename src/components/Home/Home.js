@@ -1,7 +1,10 @@
 import React from 'react';
+
 import Navigation from '../Navigation/Navigation';
 import GuestHome from './GuestHome';
 import LoggedHome from './LoggedHome';
+import Footer from '../Navigation/Footer';
+
 import {connect} from 'react-redux';
 
 function Home(props) {
@@ -13,11 +16,13 @@ function Home(props) {
         <>
           <Navigation/>
           <LoggedHome/>
+          <Footer/>
         </>
     :
         <>
           <Navigation/>
           <GuestHome/>
+          <Footer/>
         </>
   )
 }

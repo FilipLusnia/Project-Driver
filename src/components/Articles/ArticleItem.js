@@ -10,7 +10,7 @@ function ArticleList({thumbText, title, cover, id}) {
 
   const handleClick = e => {
     e.preventDefault();
-    history.push(`/articles/chosenarticle/${id}`)
+    history.push(`/articles/${id}`)
   }
 
   return (

@@ -6,6 +6,7 @@ import {firestoreConnect} from 'react-redux-firebase';
 
 import Navigation from '../Navigation/Navigation';
 import ArticleItem from './ArticleItem';
+import Footer from '../Navigation/Footer';
 
 import Loader from 'react-loader-spinner';
 
@@ -14,7 +15,7 @@ function ArticleList({articles}) {
 
   return (
     <>
-    <Navigation/>
+      <Navigation/>
       <div className="article_list_container">
         {
         articles ?
@@ -37,6 +38,7 @@ function ArticleList({articles}) {
           </div>
         }
       </div>
+      <Footer/>
     </>
   )
 }

@@ -5,6 +5,12 @@
     min-height: 200px;
     height: calc(100vh - 200px);
 }
+.forum_container{
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    margin: 40px 0;
+}
 .forum_comment{
     margin: 20px;
 }
