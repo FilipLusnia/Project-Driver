@@ -8,7 +8,7 @@ export const addPoints = pointsAmount => {
             points: getState().pointsReducer.points + pointsAmount
         })
         .then(() => firestore.collection('users').doc(currentUser.uid).get())
-        .then(aquiredDoc => dispatch({
+        .then(() => dispatch({
             type: 'POINTS_INCREASED'
         }))
     }

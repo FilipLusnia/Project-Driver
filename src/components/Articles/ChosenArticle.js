@@ -30,15 +30,15 @@ function ChosenArticle(props) {
             <p className="chosen_article_text">{currentArticle.text}</p>
 
             {fbauth.uid ? 
-            <>
-              <p className="chosen_article_bottomtext">Sprawdź czy pamiętasz przeczytany artykuł i wykonaj quiz:</p>
-              <Link to={`/quiz/${articleName}`} className="chosen_article_quizbtn">Wykonaj quiz</Link>
-            </>
+              <>
+                <p className="chosen_article_bottomtext">Sprawdź czy pamiętasz przeczytany artykuł i wykonaj quiz:</p>
+                <Link to={`/quiz/${articleName}`} className="chosen_article_quizbtn">Wykonaj quiz</Link>
+              </>
             :
-            <>
-              <p className="chosen_article_bottomtext">Aby wykonać quiz sprawdzający wiedzę z artykułu - musisz się zalogować:</p>
-              <Link to="/login" className="chosen_article_loginbtn">Zaloguj się</Link>
-            </>
+              <>
+                <p className="chosen_article_bottomtext">Aby wykonać quiz sprawdzający wiedzę z artykułu - musisz się zalogować:</p>
+                <Link to="/login" className="chosen_article_loginbtn">Zaloguj się</Link>
+              </>
             }   
           </div>
         :

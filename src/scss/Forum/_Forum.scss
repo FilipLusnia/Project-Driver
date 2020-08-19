@@ -1,0 +1,16 @@
+.forum_loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    height: calc(100vh - 200px);
+}
+.forum_comment{
+    margin: 20px;
+}
+.forum_reply{
+    color: blue;
+    background-color: yellow;
+    margin-top: 5px;
+    width: 200px;
+}
