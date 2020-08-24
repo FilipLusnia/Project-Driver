@@ -91,7 +91,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    sendReply: (text, name, commId) => dispatch(sendReply(text, name, commId))
+    sendReply: (text, creds, commId) => dispatch(sendReply(text, creds, commId))
 
   }
 }

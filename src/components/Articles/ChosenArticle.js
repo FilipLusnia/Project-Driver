@@ -22,15 +22,17 @@ function ChosenArticle(props) {
   const history = useHistory();
   const storage = firebase.storage();
 
+  const [commentText, setCommentText] = useState(true);
+  const [url, setUrl] = useState();
+
   const {articles, fbauth} = props;
   const articleName = props.match.params.articlename;
   const currentArticle = articles?.[articleName];
 
-  const [commentText, setCommentText] = useState(true);
-  const [url, setUrl] = useState();
-
-  storage.ref(`article-photos/${currentArticle?.img}`).getDownloadURL()
-  .then(url => setUrl(url))
+  if(currentArticle){
+    storage.ref(`article-photos/${currentArticle.img}`).getDownloadURL()
+    .then(url => setUrl(url))
+  }
 
   const handleChange = e => {
     setCommentText(e.target.value);
@@ -39,10 +41,17 @@ function ChosenArticle(props) {
   const handleClick = e => {
     e.preventDefault();
 
-    if(commentText.length > 0 && props.userName){
-      props.sendComment(commentText, props.userName);
+    const creds = {
+      userName: props.userName, 
+      userSurname: props.userSurname
     }
-    history.push('/forum')
+
+    if(commentText?.length > 0 && props.userName && props.userSurname){
+      props.sendComment(commentText, creds);
+      
+    }
+    history.push('/forum');
+    window.scrollTo(0, 350)
   }
 
   return (
@@ -94,12 +103,13 @@ const mapStateToProps = state => {
     fbauth: state.firebase.auth,
     articles: state.firestore.data.articles,
     userName: state.firebase.profile.name,
+    userSurname: state.firebase.profile.surname
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    sendComment: (text, name) => dispatch(sendComment(text, name))
+    sendComment: (text, creds) => dispatch(sendComment(text, creds))
   }
 }
   

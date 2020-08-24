@@ -29,7 +29,7 @@ function Forum(props) {
       props.sendComment(commentText, creds);
     }
 
-    window.scroll(0, 300)
+    window.scrollTo(0, 350)
   }
 
   props.forumError && console.log(props.forumError)
@@ -92,7 +92,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    sendComment: (text, name) => dispatch(sendComment(text, name))
+    sendComment: (text, creds) => dispatch(sendComment(text, creds))
   }
 }
 

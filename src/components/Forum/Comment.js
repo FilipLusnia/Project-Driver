@@ -10,12 +10,7 @@ export default function Comment({comment, name, surname, date, id}) {
 
   const handleClick = e => {
     e.preventDefault();
-
-    if (repliesHidden === true){
-      setRepliesHidden(false);
-    } else {
-      setRepliesHidden(true);
-    }
+    setRepliesHidden(!repliesHidden);
   }
 
   return (
