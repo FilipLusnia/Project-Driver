@@ -17,13 +17,14 @@ function Reply(props) {
 
   const handleClick = e => {
     e.preventDefault();
+    setReplyText('');
 
     const creds = {
       userName: props.userName, 
       userSurname: props.userSurname
     }
 
-    if(replyText.length > 0 && props.userName && props.commentId){
+    if(replyText?.length > 0 && props.userName && props.commentId){
       props.sendReply(replyText, creds, props.commentId);
     }
   }
@@ -60,7 +61,13 @@ function Reply(props) {
         <form className="reply_form">
           <label className="reply_form_label">
             Odpowiedz:
-            <textarea onChange={handleChange} type="text" name="name" className="reply_form_textarea" />
+            <textarea 
+              onChange={handleChange} 
+              type="text" 
+              name="name" 
+              value={replyText} 
+              className="reply_form_textarea" 
+            />
           </label>
           <input onClick={handleClick} type="submit" value="Wyślij" className="reply_form_submit" />
         </form>

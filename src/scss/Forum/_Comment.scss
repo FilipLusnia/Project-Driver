@@ -9,7 +9,7 @@
 .forum_comment_name{
     white-space: nowrap;
     font-size: 15px;
-    color: gray;
+    color: rgb(165, 165, 165);
 }
 .forum_comment_text{
     margin: 20px 0 35px;
@@ -32,6 +32,9 @@
     justify-content: flex-start;
     flex-direction: column;
     width: 100%;
+}
+.forum_comment_reply_section_title{
+    font-size: 19px;
 }
 .forum_comment_btn-unwrap{
     font-family: 'Ropa Sans', sans-serif;

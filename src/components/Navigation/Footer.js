@@ -4,10 +4,11 @@ export default function Footer() {
 
     const scrollToTop = () => {
         const c = document.documentElement.scrollTop || document.body.scrollTop;
-            if (c > 0) {
-                window.requestAnimationFrame(scrollToTop);
-                window.scrollTo(0, c - c / 10);
-            }
+        
+        if (c > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, c - c / 10);
+        }
     }
 
     const handleClick = e => {

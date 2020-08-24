@@ -31,7 +31,7 @@ export default function Comment({comment, name, surname, date, id}) {
         :
           <>
             <div className="forum_comment_reply_section">
-              <p>Odpowiedzi:</p>
+              <p className="forum_comment_reply_section_title">Odpowiedzi:</p>
               <Reply id={id}/>
             </div>
             <button className="forum_comment_btn-wrap" onClick={handleClick}>Ukryj komentarze</button>
