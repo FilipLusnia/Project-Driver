@@ -18,8 +18,13 @@ function Reply(props) {
   const handleClick = e => {
     e.preventDefault();
 
+    const creds = {
+      userName: props.userName, 
+      userSurname: props.userSurname
+    }
+
     if(replyText.length > 0 && props.userName && props.commentId){
-      props.sendReply(replyText, props.userName, props.commentId);
+      props.sendReply(replyText, creds, props.commentId);
     }
   }
 
@@ -36,15 +41,15 @@ function Reply(props) {
                 key={e.id}
                 className="forum_reply"
               >
-                <p>{e.name}</p>
-                <p>{e.reply}</p>
-                <p>{moment(e.date.toDate()).calendar()}</p>
+                <p className="forum_reply_name">{e.name} {e.surname}</p>
+                <p className="forum_reply_text">{e.reply}</p>
+                <p className="forum_reply_date">{moment(e.date.toDate()).calendar()}</p>
               </li>
             ))
             
 
           :
-            <p>Nikt jeszcze nie odpowiedział na ten post. Bądź pierwszy!</p>
+            <p className="noreplies_info">Nikt jeszcze nie odpowiedział na ten post. Bądź pierwszy!</p>
 
         :
           <Loader type="Circles" color="#5365ff" height={30}/>
@@ -52,15 +57,15 @@ function Reply(props) {
       </ul>
 
       {props.fbauth.uid ?
-        <form>
-          <label>
+        <form className="reply_form">
+          <label className="reply_form_label">
             Odpowiedz:
-            <textarea onChange={handleChange} type="text" name="name" />
+            <textarea onChange={handleChange} type="text" name="name" className="reply_form_textarea" />
           </label>
-          <input onClick={handleClick} type="submit" value="Wyślij" />
+          <input onClick={handleClick} type="submit" value="Wyślij" className="reply_form_submit" />
         </form>
       :
-        <p>Aby móc odpowiadać na posty - musisz się zalogować.</p>
+        <p className="reply_form_info">Aby móc odpowiadać na posty - musisz się zalogować.</p>
       }
     </>
   )
@@ -70,6 +75,7 @@ const mapStateToProps = (state, props) => {
   return{
     commentReplies: state.firestore.ordered[`replies-${props.id}`],
     userName: state.firebase.profile.name,
+    userSurname: state.firebase.profile.surname,
     commentId: props.id,
     forumError: state.forumReducer.forumError,
     fbauth: state.firebase.auth

@@ -19,8 +19,13 @@ function Forum(props) {
   const handleClick = e => {
     e.preventDefault();
 
-    if(commentText.length > 0 && props.userName){
-      props.sendComment(commentText, props.userName);
+    const creds = {
+      userName: props.userName, 
+      userSurname: props.userSurname
+    }
+
+    if(commentText.length > 0 && props.userName && props.userSurname){
+      props.sendComment(commentText, creds);
     }
   }
 
@@ -31,35 +36,36 @@ function Forum(props) {
       <Navigation/>
       <div className="forum_container">
         {props.fbauth.uid ?
-          <form>
-            <label>
+          <form className="forum_form">
+            <label className="forum_form_label">
               Dodaj post:
-              <textarea onChange={handleChange} type="text" name="name" />
+              <textarea onChange={handleChange} type="text" name="name" className="forum_form_textarea" />
             </label>
-            <input onClick={handleClick} type="submit" value="Wyślij" />
+            <input onClick={handleClick} type="submit" value="Dodaj" className="forum_form_submit" />
           </form>
         :
-          <p>Aby móc dodawać posty - musisz się zalogować.</p>
+          <p className="forum_form_info">Aby móc dodawać posty - musisz się zalogować.</p>
         }
-
-        <ul>
-          {
-            props.comments ?
+        {(props.comments?.length > 0) ?
+          <ul className="forum_posts_container">
+            {
               props.comments.map(comment => (
-                <Comment
-                  comment={comment.comment}
-                  name={comment.name}
-                  date={comment.date}
-                  id={comment.id}
-                  key={comment.id}
-                />
+                <li>
+                  <Comment
+                    comment={comment.comment}
+                    name={comment.name}
+                    surname={comment.surname}
+                    date={comment.date}
+                    id={comment.id}
+                    key={comment.id}
+                  />
+                </li>
               ))
-
-            :
-
-              <p> Na forum nie ma jeszcze żadnych postów.</p>
-          }
-        </ul>
+            }
+          </ul>
+        :
+          <p className="nocomments_info"> Na forum nie ma jeszcze żadnych postów.</p>
+        }
       </div>
       <Footer/>
     </>
@@ -70,6 +76,7 @@ const mapStateToProps = state => {
   return{
     comments: state.firestore.ordered.comments,
     userName: state.firebase.profile.name,
+    userSurname: state.firebase.profile.surname,
     forumError: state.forumReducer.forumError,
     fbauth: state.firebase.auth
   }

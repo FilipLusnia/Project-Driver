@@ -4,7 +4,7 @@ import Reply from './Reply';
 
 import moment from 'moment';
 
-export default function Comment({comment, name, date, id}) {
+export default function Comment({comment, name, surname, date, id}) {
 
   const [repliesHidden, setRepliesHidden] = useState(true);
 
@@ -20,19 +20,24 @@ export default function Comment({comment, name, date, id}) {
 
   return (
     <div className="forum_comment">
-      <p>{comment}</p>
-      <p>{name}</p>
-      <p>{moment(date.toDate()).calendar()}</p>
+      <p className="forum_comment_name">{name} {surname}</p>
+      <p className="forum_comment_text">{comment}</p>
+      <p className="forum_comment_date">{moment(date.toDate()).calendar()}</p>
 
-      { repliesHidden ?
-        <button onClick={handleClick}>Pokaż komentarze...</button>
+      <div className="forum_comment_bottom_section">
+        { repliesHidden ?
+          <button className="forum_comment_btn-unwrap" onClick={handleClick}>Pokaż komentarze...</button>
 
-      :
-        <>
-          <Reply id={id}/>
-          <button onClick={handleClick}>Ukryj komentarze</button>
-        </>
-      } 
+        :
+          <>
+            <div className="forum_comment_reply_section">
+              <p>Odpowiedzi:</p>
+              <Reply id={id}/>
+            </div>
+            <button className="forum_comment_btn-wrap" onClick={handleClick}>Ukryj komentarze</button>
+          </>
+        } 
+      </div>
     </div>
   )
 }

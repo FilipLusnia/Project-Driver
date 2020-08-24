@@ -1,0 +1,75 @@
+.forum_reply{
+    background-color: rgb(49, 49, 49);
+    margin: 15px 0;
+    padding: 10px 30px 20px;
+    border-radius: 0 30px 30px 30px;
+    min-width: 200px;
+}
+.noreplies_info{
+    margin: 20px 0;
+    color: rgb(61, 61, 61);
+    font-size: 25px;
+}
+.forum_reply_name{
+    white-space: nowrap;
+    font-size: 12px;
+    color: gray;
+}
+.forum_reply_text{
+    margin: 10px 0 20px;
+    font-size: 15px;
+    color: rgb(252, 230, 157);
+}
+.forum_reply_date{
+    font-size: 12px;
+    color: gray;
+    letter-spacing: 1px;
+}
+.reply_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.reply_form_label{
+    display: flex;
+    align-items: center;
+}
+.reply_form_textarea{
+    width: 50vw;
+    height: 60px;
+    margin: 0 10px;
+    background: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: 'Ropa Sans', sans-serif;
+    color: white;
+    border: 1px solid white;
+    font-size: 15px;
+    resize: none;
+}
+.reply_form_submit{
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 17px;
+    width: 110px;
+    height: 30px;
+    background-color: rgb(190, 175, 123);
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.267);
+
+    &:hover{
+        background-color: rgb(218, 190, 91);
+    }
+}
+.reply_form_info{
+    text-align: center;
+    font-size: 17px;
+    margin: 10px 10px 20px;
+}

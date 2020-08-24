@@ -1,10 +1,11 @@
-export const sendComment = (text, name) => {
+export const sendComment = (text, creds) => {
     return (dispatch, getState, {getFirebase}) => {
         const firebase = getFirebase();
         const firestore = firebase.firestore();
 
         firestore.collection('comments').add({
-            name: name,
+            name: creds.userName,
+            surname: creds.userSurname,
             comment: text,
             date: new Date()
         })
@@ -18,13 +19,14 @@ export const sendComment = (text, name) => {
     }
 }
 
-export const sendReply = (text, name, commId) => {
+export const sendReply = (text, creds, commId) => {
     return (dispatch, getState, {getFirebase}) => {
         const firebase = getFirebase();
         const firestore = firebase.firestore();
 
         firestore.collection('comments').doc(commId).collection('replies').add({
-            name: name,
+            name: creds.userName,
+            surname: creds.userSurname,
             reply: text,
             date: new Date()
         })
