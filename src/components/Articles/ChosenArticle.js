@@ -49,9 +49,10 @@ function ChosenArticle(props) {
     if(commentText?.length > 0 && props.userName && props.userSurname){
       props.sendComment(commentText, creds);
       
+      history.push('/forum');
+      window.scrollTo(0, 350)
     }
-    history.push('/forum');
-    window.scrollTo(0, 350)
+    
   }
 
   return (
