@@ -20,8 +20,8 @@ export default function App(){
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/articles" component={ArticleList} />
-        <Route path="/articles/:articlename" component={ChosenArticle} />
-        <Route path="/quiz/:articlename" component={Quiz} />
+        <Route exact path="/articles/:articlename" component={ChosenArticle} />
+        <Route exact path="/quiz/:articlename" component={Quiz} />
         <Route exact path="/forum" component={Forum} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
