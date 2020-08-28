@@ -10,7 +10,7 @@ import {deleteAcc} from '../Redux/Actions/FBauthActions';
 
 function Profile(props) {
   
-  const {fbauth, points, level} = props;
+  const {fbauth, points, level, pointsToNext, quizes, passedQuizes} = props;
   const history = useHistory();
 
   useEffect(()=> {
@@ -37,10 +37,15 @@ function Profile(props) {
           <h2>TWÓJ PROFIL:</h2>
           <ul>
             <li>Ilość zebranych punktów: {points}</li>
-            <li>Poziom: {level}</li>
-            <li>Ilość punktów do następnego poziomu: WIP</li>
-            <li>Ukończone quizy: WIP</li>
-            <li>Quizy ukończone z pozytywnym wynikiem: WIP</li>
+            {level === 10 
+            ?
+              <li>Poziom: {level} (max)</li>
+            :
+              <li>Poziom: {level}</li>
+            }
+            <li>Ilość punktów do następnego poziomu: {pointsToNext}</li>
+            <li>Ukończone quizy: {quizes}</li>
+            <li>Quizy ukończone z pozytywnym wynikiem: {passedQuizes}</li>
           </ul>
         </div>
       </div>
@@ -55,7 +60,10 @@ const mapStateToProps = state => {
     points: state.firebase.profile.points,
     name: state.firebase.profile.name,
     surName: state.firebase.profile.surname,
-    level: state.firebase.profile.level
+    level: state.firebase.profile.level,
+    pointsToNext: state.firebase.profile.pointsToNext,
+    quizes: state.firebase.profile.quizes,
+    passedQuizes: state.firebase.profile.passedQuizes,
   }
 }
 

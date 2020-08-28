@@ -41,7 +41,10 @@ export const signUp = creds => {
                 name: creds.nameVal,
                 surname: creds.surnameVal,
                 points: 0,
-                level: 1
+                level: 1,
+                pointsToNext: 5,
+                quizes: 0,
+                passedQuizes: 0
             })
         })
         .then(() => dispatch({

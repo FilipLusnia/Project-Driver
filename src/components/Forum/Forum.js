@@ -8,6 +8,9 @@ import Footer from '../Navigation/Footer';
 import Comment from './Comment';
 import {sendComment} from '../Redux/Actions/forumActions';
 
+import Loader from 'react-loader-spinner';
+
+
 function Forum(props) {
 
   const [commentText, setCommentText] = useState();
@@ -55,24 +58,31 @@ function Forum(props) {
         :
           <p className="forum_form_info">Aby móc dodawać posty - musisz się zalogować.</p>
         }
-        {(props.comments?.length > 0) ?
-          <ul className="forum_posts_container">
-            {
-              props.comments.map(comment => (
-                <li key={comment.id}>
-                  <Comment
-                    comment={comment.comment}
-                    name={comment.name}
-                    surname={comment.surname}
-                    date={comment.date}
-                    id={comment.id}
-                  />
-                </li>
-              ))
-            }
-          </ul>
+        {props.comments 
+        ?
+          (props.comments?.length > 0) 
+          ?
+            <ul className="forum_posts_container">
+              {
+                props.comments.map(comment => (
+                  <li key={comment.id}>
+                    <Comment
+                      comment={comment.comment}
+                      name={comment.name}
+                      surname={comment.surname}
+                      date={comment.date}
+                      id={comment.id}
+                    />
+                  </li>
+                ))
+              }
+            </ul>
+          :
+            <p className="nocomments_info"> Na forum nie ma jeszcze żadnych postów.</p>
         :
-          <p className="nocomments_info"> Na forum nie ma jeszcze żadnych postów.</p>
+          <div className="forum_loader">
+            <Loader type="Circles" color="#5365ff" height={80}/>
+          </div>
         }
       </div>
       <Footer/>

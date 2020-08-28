@@ -15,7 +15,7 @@ function ArticleList({thumbText, title, cover, id}) {
   const history = useHistory();
   const storage = firebase.storage();
 
-  const [url, setUrl] = useState();
+  const [url, setUrl] = useState(null);
 
   const handleClick = e => {
     e.preventDefault();
@@ -27,7 +27,8 @@ function ArticleList({thumbText, title, cover, id}) {
 
   return (
       <div className="article_item_container" onClick={handleClick}>
-        {url ?
+        {url 
+        ?
           <>
             <img src={url} alt="cover" className="article_item_img"/>
             <h2 className="article_item_title">{title}</h2>

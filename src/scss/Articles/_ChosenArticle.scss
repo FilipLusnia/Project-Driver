@@ -6,14 +6,14 @@
 }
 .chosen_article_title{
     text-transform: uppercase;
-    width: 50vw;
+    width: 70vw;
     font-size: 45px;
     margin-top: 70px;
     font-family: 'Merriweather', sans-serif;
     line-height: 50px;
 }
 .chosen_article_thumbtext{
-    width: 50vw;
+    width: 70vw;
     font-size: 19px;
     margin-top: 15px;
     color: rgb(156, 156, 156);
@@ -21,20 +21,35 @@
 }
 .chosen_article_img{
     margin-top: 35px;
-    max-width: 50vw;
+    max-width: 70vw;
+}
+.chosen_article_source{
+    margin-top: 30px;
+    a{
+        color: rgb(103, 101, 141); 
+    }
 }
 .chosen_article_text{
     min-height: 300px;
     font-family: 'Merriweather', sans-serif;
-    width: 50vw;
+    width: 70vw;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: left;
+    line-height: 40px;
 }
 .chosen_article_bottomtext{
     font-size: 20px;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-top: 90px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.chosen_article_bottomline{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    margin-bottom: 25px;
     text-align: center;
 }
 .chosen_article_quizbtn{
@@ -42,10 +57,9 @@
     animation: pulseButton 2.5s infinite;
     width: 190px;
     min-height: 50px;
-    background-color: rgb(103, 101, 141); 
+    background-color: rgb(83, 101, 255);
     text-decoration: none;
     border-radius: 10px;
-    margin-bottom: 90px;
     font-size: 17px;
     color: white;
     transition: 0.2s;
@@ -58,7 +72,7 @@
     align-items: center;
 
     &:hover{
-        background-color: rgb(173, 175, 199);
+        background-color: rgb(155, 179, 255);
         animation: pulseButton 1s infinite;  
     }
 }
@@ -69,7 +83,7 @@
 	}
 
 	50% {
-		box-shadow: 0 0 20px 5px rgba(212, 212, 212, 0.3);
+		box-shadow: 0 0 20px 5px rgba(102, 117, 255, 0.575);
 	}
 
 	100% {
@@ -82,7 +96,7 @@
     min-height: 50px;
     background-color: rgb(103, 101, 141); 
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     text-decoration: none;
     font-size: 17px;
     color: white;

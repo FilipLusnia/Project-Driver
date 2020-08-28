@@ -8,7 +8,7 @@
     height: 500px;
     width: 30%;
     background-color: rgb(29, 29, 29);
-    margin: 0 10px;
+    margin: 50px 10px;
     border-radius: 15% 0 0 15%;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -23,7 +23,7 @@
     height: 500px;
     width: 50%;
     background-color: rgb(29, 29, 29);
-    margin: 0 10px;
+    margin: 50px 10px;
     border-radius: 0 15% 15% 0;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -35,12 +35,13 @@
 
     h2{
         margin-top: 20px;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
         font-size: 40px;
     }
 
     li{
-        margin-bottom: 50px;
+        margin-bottom: 42px;
+        letter-spacing: 1px;
     }
 }
 .profile_picture{

@@ -114,7 +114,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 195px;
+    width: 210px;
     height: 105px;
     background-color: rgb(57, 93, 146);
     border-radius: 15px;
@@ -131,9 +131,15 @@
 .profileinfo_level{
     margin-top: 10px;
     font-size: 20px;
+    letter-spacing: 1px;
     color: rgb(180, 215, 255);
+}
+.profileinfo_max_level{
+    font-size: 13px;
+    color: rgb(253, 255, 107);
 }
 .profileinfo_points{
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 16px;
+    letter-spacing: 1px;
 }

@@ -50,7 +50,6 @@ function ChosenArticle(props) {
       props.sendComment(commentText, creds);
       history.push('/forum');
     }
-    
   }
 
   return (
@@ -63,13 +62,16 @@ function ChosenArticle(props) {
             <h1 className="chosen_article_title">{currentArticle.title}</h1>
             <h2 className="chosen_article_thumbtext">{currentArticle.thumbText}</h2>
             <img src={url} alt="cover" className="chosen_article_img"></img>
+            <p className="chosen_article_source"> 
+              Tekst arytkułu pochodzi z tej strony: <a href={currentArticle?.src} target="_blank" rel="noopener noreferrer">link</a>
+            </p>
             <p className="chosen_article_text">{currentArticle.text}</p>
 
             {fbauth.uid ? 
               <>
                 <p className="chosen_article_bottomtext">Sprawdź czy pamiętasz przeczytany artykuł i wykonaj quiz:</p>
                 <Link to={`/quiz/${articleName}`} className="chosen_article_quizbtn">Wykonaj quiz</Link>
-                <p className="chosen_article_bottomtext">_________________________________________________</p>
+                <p className="chosen_article_bottomline">_________________________________________________</p>
                 
                 <form className="chosen_article_form">
                   <label className="chosen_article_form_label">

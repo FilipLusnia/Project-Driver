@@ -5,3 +5,50 @@
     min-height: 100vh;
     margin: 40px 0;
 }
+.quiz_loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+}
+.quiz_name{
+    font-family: 'Merriweather', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+.quiz_title_container{
+    text-align: center;
+    font-size: 18px;
+    margin: 30px 0;
+    line-height: 25px;
+}
+.quiz_submit_btn{
+    margin-top: 80px;
+    font-family: 'Ropa Sans', sans-serif;
+    width: 210px;
+    min-height: 50px;
+    font-size: 20px;
+    background-color: rgb(103, 101, 141); 
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.267);
+
+    &:hover{
+        transform: translate(0, -2px);
+        background-color: rgb(122, 116, 236);
+    }
+
+    &:active{
+        transform: translate(0, 0);
+    }
+}
+.quiz_warn{
+    margin-top: 70px;
+    font-size: 20px;
+}

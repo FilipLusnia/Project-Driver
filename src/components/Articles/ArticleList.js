@@ -18,7 +18,7 @@ function ArticleList({articles}) {
       <Navigation/>
       <div className="article_list_container">
         {
-        articles ?
+        (articles?.length > 1) ?
           <ul className="article_list">
             {articles.map(item => (
               <ArticleItem 
