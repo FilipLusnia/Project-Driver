@@ -21,7 +21,9 @@ import {updateLevel} from './Redux/Actions/levelActions';
 function App(props){
 
   useEffect(() => {
-    props.updateLevel()
+    if(props.fbauth.uid){
+      props.updateLevel()
+    }
   }, [props.points, props])
 
   return (
@@ -45,7 +47,8 @@ function App(props){
 
 const mapStateToProps = state => {
   return {
-    points: state.firebase.profile.points
+    points: state.firebase.profile.points,
+    fbauth: state.firebase.auth,
   }
 }
 

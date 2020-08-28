@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    height: calc(100vh - 200px);
+    min-height: calc(100vh);
     color: white;
     text-align: center;
     background-image: url(../../resources/main-background.jpeg);
@@ -63,6 +63,7 @@
 }
 .guestHome_loginbtn{
     margin-top: 10px;
+    margin-bottom: 50px;
     color: rgb(92, 92, 92);
     z-index: 1;
 
