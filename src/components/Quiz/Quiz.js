@@ -21,6 +21,7 @@ function Quiz(props) {
   const quizData = props.quizData ? props.quizData[0] : null;
 
   const [answers, setAnswers] = useState(null);
+  console.log(answers)
   
   useEffect(()=> {
     if(!props.fbauth.uid){
@@ -30,7 +31,7 @@ function Quiz(props) {
 
   useEffect(()=> {
     setAnswers(null);
-  }, [quizData]);
+  }, [articleData]);
 
   const getAnswers = (question, answer) => {
     setAnswers(prev => {return{...prev, [question]: answer}})
