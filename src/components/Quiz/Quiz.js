@@ -51,7 +51,7 @@ function Quiz(props) {
       <Navigation/>
       <div className="quiz_container"> 
         {
-          ((quizData !== (null && undefined)) && (articleData.id === props.match.params.articlename)) 
+          (quizData?.questions && (quizData.id === props.match.params.articlename)) 
           ?
             <>
               <h1 className="quiz_name">{articleData.title}</h1>

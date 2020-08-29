@@ -65,6 +65,7 @@
     justify-content: center;
     max-height: 20px;
     white-space: nowrap;
+    transition: 0.7s;
 
     &:nth-child(4){
         color: rgb(253, 255, 107);
@@ -76,7 +77,6 @@
 
     &:hover{
         color: rgb(83, 101, 255);
-        transition: 0.7s;
 
         &:after{
             content: '';
