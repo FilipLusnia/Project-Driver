@@ -21,7 +21,6 @@ function Quiz(props) {
   const quizData = props.quizData ? props.quizData[0] : null;
 
   const [answers, setAnswers] = useState(null);
-  console.log(answers)
   
   useEffect(()=> {
     if(!props.fbauth.uid){
