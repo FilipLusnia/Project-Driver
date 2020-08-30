@@ -17,6 +17,10 @@ function ArticleList({articles}) {
     <>
       <Navigation/>
       <div className="article_list_container">
+        <h1 className="article_list_title">
+          Witaj w naszej bazie wiedzy motoryzacyjnej!<br/>Czytaj artykuły i sprawdź czy coś z nich wyniosłeś/aś,
+          wykonując quiz na końcu każdego tekstu.
+        </h1>
         {
         (articles?.length > 1) ?
           <ul className="article_list">
