@@ -41,6 +41,7 @@ function Forum(props) {
     <>
       <Navigation/>
       <div className="forum_container">
+        <h1 className="forum_title">Witaj na forum. <br/> Nie krępuj się i pytaj o wszystko!</h1>
         {props.fbauth.uid ?
           <form className="forum_form">
             <label className="forum_form_label">

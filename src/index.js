@@ -74,7 +74,7 @@ ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps}>
       <AuthIsLoaded>
-        <App />
+        <App/>
       </AuthIsLoaded>
     </ReactReduxFirebaseProvider>
   </Provider>
