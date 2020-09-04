@@ -16,22 +16,20 @@ function ProfileInfo(props) {
   },[], false, false, 200)
 
   return (
-    <>
-      <div style={displayInfo} className="profileinfo_container">
-        <div>
-            <p>{props.name} {props.surName}</p>
-            {props.level === 10
-            ?
-              <p className="profileinfo_level">POZIOM: {props.level} 
-              <span className="profileinfo_max_level"> (MAX)</span></p>
-            :
-              <p className="profileinfo_level">POZIOM: {props.level}</p>
-            }
-            <p className="profileinfo_points">PUNKTY: {props.points}</p>
-        </div>
-        <img src={icon} alt="profile pic" className="profileinfo_picture"></img>
+    <div style={displayInfo} className="profileinfo_container">
+      <div>
+          <p>{props.name} {props.surName}</p>
+          {props.level === 10
+          ?
+            <p className="profileinfo_level">POZIOM: {props.level} 
+            <span className="profileinfo_max_level"> (MAX)</span></p>
+          :
+            <p className="profileinfo_level">POZIOM: {props.level}</p>
+          }
+          <p className="profileinfo_points">PUNKTY: {props.points}</p>
       </div>
-    </>
+      <img src={icon} alt="profile pic" className="profileinfo_picture"></img>
+    </div>
   )
 }
 

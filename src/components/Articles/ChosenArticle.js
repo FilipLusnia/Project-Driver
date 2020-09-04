@@ -71,7 +71,7 @@ function ChosenArticle(props) {
               <>
                 <p className="chosen_article_bottomtext">Sprawdź czy pamiętasz przeczytany artykuł i wykonaj quiz:</p>
                 <Link to={`/quiz/${articleName}`} className="chosen_article_quizbtn">Wykonaj quiz</Link>
-                <p className="chosen_article_bottomline">_________________________________________________</p>
+                <p className="chosen_article_bottomline">_____________________</p>
                 
                 <form className="chosen_article_form">
                   <label className="chosen_article_form_label">

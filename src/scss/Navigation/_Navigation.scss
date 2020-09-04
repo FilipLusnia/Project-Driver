@@ -7,17 +7,30 @@
     background-color: rgb(34, 37, 46);
     box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.61);
     position: relative;
-    transition: 1s;
+    z-index: 10;
+    transition: 0.5s;
+
+    @media(min-width: 900px){
+        overflow: hidden;
+    }
+
+    @media(max-width: 900px){
+        height: 130px;
+        box-shadow: none;
+    }
+
+    @media(max-width: 800px){
+        height: 100px;
+    }
 }
 .nav_shrinked{
-    z-index: 10;
     transition: 0.8s ease-out;
     position: sticky;
     top: 0;
+    height: 200px;
     animation: appear 0.8s ease-out;
     transform: translate(0, -60%);
     flex-direction: row;
-    overflow: hidden;
 
     @keyframes appear {
         from {transform: translate(0, -100%);}
@@ -29,9 +42,15 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-}
-.nav_top_shrinked{
+    z-index: 5;
 
+    @media(max-width: 900px){
+        height: 100%;
+        background-color: rgb(34, 37, 46);
+        box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.61);
+        justify-content: flex-start;
+        padding-left: 40px;
+    }
 }
 .nav_logo_container{
     display: flex;
@@ -39,19 +58,50 @@
     justify-content: space-between;
     height: 120px;
     width: 310px;
+    transition: 1s;
+
+    @media(max-width: 900px){
+        height: 130px;
+    }
+
+    @media(max-width: 800px){
+        height: 100px;
+        width: 240px;
+    }
+
+    @media(max-width: 500px){
+        width: 170px;
+    }
 }
 .nav_logo_container_shrinked{
     position: absolute;
     bottom: 0;
-    left: 5%;
     height: 80px;
-    width: 220px;
+    width: 210px;
+    left: 5%;
+
+    @media(max-width: 500px){
+        width: 170px;
+    }
 }
 .nav_logo_icon{
     height: 120px;
+
+    @media(max-width: 800px){
+        height: 100px;
+    }
+
+    @media(max-width: 500px){
+        height: 70px;
+    }
 }
 .nav_logo_icon_shrinked{
     height: 80px;
+
+    @media(max-width: 500px){
+        height: 70px;
+        width: 80px;
+    }
 }
 .nav_logo_text{
     text-decoration: none;
@@ -65,6 +115,16 @@
     span{
         color: rgb(83, 101, 255);
     }
+
+    @media(max-width: 800px){
+        font-size: 60px;
+        line-height: 30px;
+    }
+
+    @media(max-width: 500px){
+        font-size: 40px;
+        line-height: 20px;
+    }
 }
 .nav_logo_text_shrinked{
     height: 80px;
@@ -73,22 +133,63 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    @media(max-width: 500px){
+        font-size: 40px;
+        line-height: 20px;
+    }
 }
 .nav_links_container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
+    transition: 0.7s;
+
+    @media(max-width: 900px){
+        width: 100%;
+        height: 500px;
+        background-color: rgb(24, 24, 24);
+        transform: translate(0, -100%);
+        box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.342);
+        border-radius: 20px;
+        border: 1px solid rgb(20, 20, 20)
+    }
 }
 .nav_links_container_shrinked{
     position: absolute;
     bottom: 0;
     right: 2%;
     height: 100px;
+
+    @media(max-width: 900px){
+        right: 0;
+        height: 300px;
+        transform: translate(0, -100%);
+        justify-content: flex-end;
+    }
+
+    @media(max-width: 500px){
+        height: 370px;
+    }
 }
 .nav_links{
     display: flex;
+    justify-content: center;
     margin-top: 15px;
+    max-width: 100%;
+    
+    @media(max-width: 900px){
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 200px;
+    }
+
+    @media(max-width: 500px){
+        height: 300px;
+    }
 }
 
 .nav_links_item{
@@ -140,11 +241,46 @@
         color: rgb(255, 58, 58);
         margin: 0 2px;
     }
-}
 
+    @media(max-width: 950px){
+        margin: 0 15px;
+        padding: 10px;
+    }
+
+    @media(max-width: 900px){
+        font-size: 20px;
+        margin: 0px 0px;
+    }
+
+    @media(max-width: 500px){
+        font-size: 25px;
+        margin: 10px 0px;
+    }
+}
+.nav_links_item_shrinked{
+    @media(max-width: 1300px){
+        margin: 0 15px;
+    }
+    @media(max-width: 1100px){
+        font-size: 15px;
+    }
+    @media(max-width: 900px){
+        font-size: 20px;
+        margin: 5 0px;
+    }
+
+    @media(max-width: 500px){
+        margin: 5px 0px;
+        font-size: 20px;
+    }
+}
 .nav_decor{
     width: 91%;
     border-top: 1px solid white;
+
+    @media(max-width: 900px){
+        display: none;
+    }
 }
 
 .profileinfo_container{
@@ -160,8 +296,17 @@
     padding: 0 15px;
     right: 0;
     position: absolute;
-    margin-right: 30px;
-    margin-top: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+    @media(max-width: 1200px){
+        height: 90px;
+        width: 180px;
+    }
+    
+    @media(max-width: 900px){
+        display: none;
+    }
 }
 .profileinfo_picture{
     height: 60px;
@@ -171,13 +316,121 @@
     font-size: 20px;
     letter-spacing: 1px;
     color: rgb(180, 215, 255);
+
+    @media(max-width: 1200px){
+        font-size: 15px;
+    }
 }
 .profileinfo_max_level{
     font-size: 13px;
     color: rgb(253, 255, 107);
+
+    @media(max-width: 1200px){
+        font-size: 10px;
+    }
 }
 .profileinfo_points{
     margin-top: 5px;
     font-size: 16px;
     letter-spacing: 1px;
+
+    @media(max-width: 1200px){
+        font-size: 12px;
+    }
+}
+.nav_burger{
+    display: none;
+}
+.nav_burger:checked ~ .nav_burger_label{
+    transform: rotate(-90deg) rotateX(180deg);
+}
+.nav_burger:checked ~ .nav_links_container{
+    @media(max-width: 900px){
+        transform: translate(0, 0%);
+    }
+}
+.nav_burger:checked ~ .nav_links_container_shrinked{
+    @media(max-width: 900px){
+        transform: translate(0, 70%);
+    }
+
+    @media(max-width: 500px){
+        transform: translate(0, 70%);
+    }
+}
+.nav_burger_label{
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    bottom: 35%;
+    z-index: 11;
+    transition: 0.7s;
+
+    img {
+        height: 40px;
+    }
+
+    @media(min-width: 900px){
+        display: none;
+    }
+
+    @media(max-width: 800px){
+        bottom: 30%;
+        height: 40px;
+    }
+}
+.nav_burger_label_shrinked{
+    bottom: 10%;
+}
+.smallprofileinfo_container{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 210px;
+    height: 105px;
+    background-color: rgb(57, 93, 146);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 0 15px;
+    margin-top: 10px;
+
+    @media(max-width: 1200px){
+        height: 90px;
+        width: 180px;
+    }
+
+    @media(min-width: 900px){
+        display: none;
+    }
+}
+.smallprofileinfo_picture{
+    height: 60px;
+}
+.smallprofileinfo_level{
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(180, 215, 255);
+
+    @media(max-width: 1200px){
+        font-size: 15px;
+    }
+}
+.smallprofileinfo_max_level{
+    font-size: 13px;
+    color: rgb(253, 255, 107);
+
+    @media(max-width: 1200px){
+        font-size: 10px;
+    }
+}
+.smallprofileinfo_points{
+    margin-top: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    @media(max-width: 1200px){
+        font-size: 12px;
+    }
 }

@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media(max-width: 600px){
+        margin: 30px;
+    }
 }
 
 .article_list{
@@ -28,4 +32,16 @@
     text-align: center;
     width: 80%;
     line-height: 35px;
+
+    @media(max-width: 900px){
+        font-size: 25px;
+        line-height: 30px;
+        width: 100%;
+        margin: 0 0 30px;
+    }
+
+    @media(max-width: 500px){
+        font-size: 15px;
+        line-height: 25px;
+    }
 }

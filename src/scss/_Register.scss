@@ -4,6 +4,7 @@
     flex-direction: column;
     min-height: 100vh;
     margin: 40px 0;
+    text-align: center;
 
     h1{
         font-size: 30px;
@@ -24,12 +25,33 @@
     flex-direction: column;
     border-radius: 25px;
     box-shadow: 0 15px 25px 5px rgba(0, 0, 0, 0.534);
+
+    @media(max-width: 1200px){
+        background-image: none;
+        width: 90vw;
+        min-width: 250px;
+    }
 }
 
 .register_form{
     transform: translate(62%, 0);
     width: 450px;
     text-align: center;
+
+    @media(max-width: 1200px){
+        transform: translate(0);
+        width: 100%;
+    }
+}
+.register_inputs_container{
+    @media(max-width: 1200px){
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.register_input_container{
+    max-width: 100%;
 }
 .register_form_label{
     display: flex;
@@ -37,11 +59,19 @@
     justify-content: space-between;
     width: 460px;
     font-size: 20px;
-    height: 65px;
+    height: 55px;
     white-space: nowrap;
 
     p{
         font-size: 15px;
+    }
+    
+    @media(max-width: 1200px){
+        width: 40%;
+        justify-content: space-between;
+    }
+    @media(max-width: 600px){
+        width: 70%;
     }
 }
 .register_form_input{
@@ -60,6 +90,15 @@
     &:focus{
         transform: scale(1.05);
     }
+
+    @media(max-width: 1200px){
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+}
+.register_input_error{
+    margin: 0 15px;
 }
 .register_form_buttons{
     display: flex;

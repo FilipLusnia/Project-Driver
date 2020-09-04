@@ -2,24 +2,43 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: calc(100vh);
+    min-height: 100vh;
 }
 .quiz_results_title{
     font-size: 40px;
     margin-top: 50px;
     margin-bottom: 60px;
+    text-align: center;
 }
 .quiz_results_result{
     font-size: 30px;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    text-align: center;
+
+    @media(max-width: 500px){
+        font-size: 20px;
+        margin: 0px 10px 20px;
+    }
 }
 .quiz_results_score{
     font-size: 30px;
     letter-spacing: 1px;
+    text-align: center;
+
+    @media(max-width: 500px){
+        font-size: 20px;
+        margin: 0px 10px 20px;
+    }
 }
 .quiz_results_point{
     margin-top: 65px;
     font-size: 20px;
     letter-spacing: 1px;
+    text-align: center;
+
+    @media(max-width: 500px){
+        font-size: 15px;
+        margin: 65px 10px 0px;
+    }
 }

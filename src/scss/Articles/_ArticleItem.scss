@@ -22,11 +22,24 @@
     &:hover{
         transform: scale(1.1);
     }
+
+    @media(max-width: 900px){
+        height: auto;
+        width: 100vw;
+        margin: 25px 0px;
+        padding-bottom: 30px;
+    }
 }
 .article_item_img{
     min-width: 400px;
     height: 260px;
     border-bottom: 2px solid rgb(255, 255, 255);
+
+    @media(max-width: 900px){
+        min-width: 0;
+        height: 45vw;
+        width: 100%;
+    }
 }
 .article_item_title{
     text-align: center;
@@ -37,10 +50,21 @@
     box-sizing: border-box;
     padding: 0 25px;
     letter-spacing: 1px;
+
+    @media(max-width: 900px){
+        font-size: 23px;
+        margin: 25px 0;
+        padding: 0 15px;
+    }
 }
 .article_item_thumbtext{
     text-align: center;
     box-sizing: border-box;
     padding: 0 15px;
     width: 100%;
+
+    @media(max-width: 900px){
+        font-size: 13px;
+        line-height: 15px;
+    }
 }

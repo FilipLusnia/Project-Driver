@@ -3,22 +3,36 @@
     margin: 10px 0;
     padding: 10px 30px 20px;
     border-radius: 0 30px 30px 30px;
-    min-width: 200px;
+    min-width: 70px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.13);
+
+    @media(max-width: 900px){
+        padding: 10px 15px 20px;
+    }
 }
 .noreplies_info{
     margin: 20px 0;
     color: rgb(61, 61, 61);
     font-size: 25px;
+
+    @media(max-width: 900px){
+        font-size: 20px;
+    }
 }
 .forum_reply_name{
     white-space: nowrap;
     font-size: 12px;
     color: rgb(165, 165, 165);
+    
 }
 .forum_reply_text{
     margin: 10px 0 20px;
     font-size: 15px;
     color: rgb(252, 230, 157);
+
+    @media(max-width: 900px){
+        font-size: 13px;
+    }
 }
 .forum_reply_date{
     font-size: 12px;
@@ -30,10 +44,19 @@
     justify-content: center;
     align-items: center;
     margin: 30px;
+
+    @media(max-width: 900px){
+        flex-direction: column;
+    }
 }
 .reply_form_label{
     display: flex;
     align-items: center;
+    color: rgb(165, 165, 165);
+
+    @media(max-width: 900px){
+        flex-direction: column;
+    }
 }
 .reply_form_textarea{
     width: 50vw;
@@ -50,11 +73,16 @@
     border-radius: 10px;
     font-size: 15px;
     resize: none;
+
+    @media(max-width: 900px){
+        margin: 10px;
+        width: 70vw;
+    }
 }
 .reply_form_submit{
     font-family: 'Ropa Sans', sans-serif;
     font-size: 17px;
-    width: 110px;
+    min-width: 110px;
     height: 30px;
     background-color: rgb(190, 175, 123);
     border-radius: 10px;
@@ -67,6 +95,10 @@
 
     &:hover{
         background-color: rgb(218, 190, 91);
+    }
+
+    @media(max-width: 900px){
+        margin: 10px 0 20px;
     }
 }
 .reply_form_info{

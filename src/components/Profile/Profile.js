@@ -36,16 +36,16 @@ function Profile(props) {
         <div className="profile_rightside">
           <h2>TWÓJ PROFIL:</h2>
           <ul>
-            <li>Ilość zebranych punktów: {points}</li>
+            <li><span>Ilość zebranych punktów: </span>{points}</li>
             {level === 10 
             ?
-              <li>Poziom: {level} (max)</li>
+              <li><span>Poziom: </span>{level} (max)</li>
             :
-              <li>Poziom: {level}</li>
+              <li><span>Poziom: </span>{level}</li>
             }
-            <li>Ilość punktów do następnego poziomu: {pointsToNext}</li>
-            <li>Ukończone quizy: {quizes}</li>
-            <li>Quizy ukończone z pozytywnym wynikiem: {passedQuizes}</li>
+            <li><span>Ilość punktów do następnego poziomu: </span>{pointsToNext}</li>
+            <li><span>Ukończone quizy: </span>{quizes}</li>
+            <li><span>Quizy ukończone z pozytywnym wynikiem: </span>{passedQuizes}</li>
           </ul>
         </div>
       </div>

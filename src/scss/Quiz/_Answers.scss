@@ -20,6 +20,10 @@
     &:hover{
         background-color: rgb(95, 95, 95);
         transform: translate(15px, 0);
+
+        @media(max-width: 600px){
+            transform: translate(8px, 0);
+        }
     }
 
     .quiz_answer_selector{
@@ -50,5 +54,10 @@
     input:checked ~ .quiz_answer_selector:after{
         background-color: rgb(83, 101, 255);
         box-shadow: 0 0 15px rgba(90, 92, 194, 0.76);
+    }
+
+    @media(max-width: 600px){
+        font-size: 16px;
+        margin: 15px 15px 0px;
     }
 }
