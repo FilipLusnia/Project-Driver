@@ -37,8 +37,16 @@
 
     @media(max-width: 900px){
         min-width: 0;
-        height: 45vw;
+        height: 50vw;
         width: 100%;
+    }
+
+    @media(max-width: 600px){
+        height: 48vw;
+    }
+
+    @media(max-width: 400px){
+        height: 45vw;
     }
 }
 .article_item_title{

@@ -8,6 +8,8 @@ Want to try this app? Click [here].
 
 ## Features
 
+![](pd-gif-represent.gif)
+
 In this app, you can: 
 
 - Read articles about traffic regulations and tips for drivers
