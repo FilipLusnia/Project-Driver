@@ -57,9 +57,11 @@
     align-items: center;
     justify-content: space-between;
     height: 120px;
+    max-height: 130px;
     width: 310px;
     transition: 1s;
     left: 0;
+    text-decoration: none;
 
     @media(max-width: 1200px){
         padding-left: 10px;
@@ -114,7 +116,6 @@
     font-size: 75px;
     text-align: center;
     line-height: 40px;
-    cursor: default;
 
     span{
         color: rgb(83, 101, 255);
@@ -158,7 +159,7 @@
         transform: translate(0, -100%);
         box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.342);
         border-radius: 0 0 20px 20px;
-        border: 1px solid rgb(20, 20, 20);
+        border-bottom: 1px solid rgb(20, 20, 20);
     }
 }
 .nav_links_container_shrinked{
@@ -172,6 +173,7 @@
         height: 300px;
         transform: translate(0, -100%);
         justify-content: flex-end;
+        border-bottom: 1px solid rgb(20, 20, 20);
     }
 
     @media(max-width: 500px){

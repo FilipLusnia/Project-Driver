@@ -27,10 +27,10 @@ function LoggedOutNavigation() {
         <img src={burger} alt="burger" className="nav_burger_icon"/>
       </label>
       <div className="nav_top">
-        <div className={shouldNavShrink ? "nav_logo_container nav_logo_container_shrinked" : "nav_logo_container"}>
+        <Link to="/" className={shouldNavShrink ? "nav_logo_container nav_logo_container_shrinked" : "nav_logo_container"}>
           <img src={logo} alt="logo" className={shouldNavShrink ? "nav_logo_icon nav_logo_icon_shrinked" : "nav_logo_icon"}/>
           <div className={shouldNavShrink ? "nav_logo_text nav_logo_text_shrinked" : "nav_logo_text"}>PROJECT: <br/> <span>_DRIVER</span></div>
-        </div>
+        </Link>
       </div>
 
       <div className={shouldNavShrink ? "nav_links_container nav_links_container_shrinked" : "nav_links_container"}>
