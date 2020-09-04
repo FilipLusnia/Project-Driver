@@ -11,7 +11,7 @@
     flex-direction: column;
     height: 500px;
     width: 400px;
-    margin: 25px 40px;
+    margin: 20px;
     border-radius: 15px;
     overflow: hidden;
     background-color: rgb(34, 37, 46);
@@ -20,13 +20,13 @@
     transition: 0.4s;
 
     &:hover{
-        transform: scale(1.1);
+        transform: scale(1.09);
     }
 
     @media(max-width: 900px){
         height: auto;
         width: 100vw;
-        margin: 25px 0px;
+        margin: 15px 0px;
         padding-bottom: 30px;
     }
 }

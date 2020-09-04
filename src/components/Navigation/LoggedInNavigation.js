@@ -1,7 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {
-  Link
-} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import { connect } from 'react-redux';
 import { signOut } from '../Redux/Actions/FBauthActions';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
@@ -16,21 +14,34 @@ function LoggedInNavigation(props) {
   const [shouldNavShrink, setShouldNavShrink] = useState(false);
   const [burgerChecked, setBurgerChecked] = useState(false);
 
-  const node = useRef();
+  const navNode = useRef();
+  const burgerNode = useRef();
+
+  const activeStyle = {
+    color: 'rgb(83, 101, 255)'
+  }
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClick);
+
+    const handleClick = e => {
+      e.preventDefault();
+
+      if(navNode.current.contains(e.target) || burgerNode.current.contains(e.target)) {
+        return;
+      }
+      setBurgerChecked(false);
+    }
+
+    if(burgerChecked){
+      document.addEventListener("mousedown", handleClick);
+    } else {
+      document.removeEventListener("mousedown", handleClick);
+    }
 
     return () => {
       document.removeEventListener("mousedown", handleClick);
     }
-  }, []);
-
-  const handleClick = e => {
-    e.preventDefault();
-  };
-
-  console.log(burgerChecked)
+  }, [burgerChecked]);
 
   useScrollPosition(({ prevPos, currPos }) => {
     if((currPos.y <= -200)){
@@ -42,10 +53,12 @@ function LoggedInNavigation(props) {
 
   return (
     <div className={shouldNavShrink ? "nav nav_shrinked" : "nav"}>
-      <input id="burgerCheckbox" className="nav_burger" type="checkbox" onChange={e => setBurgerChecked(e.target.checked)} checked={burgerChecked}/>
+
+      <input id="burgerCheckbox" className="nav_burger" type="checkbox" onChange={() => setBurgerChecked(!burgerChecked)} checked={burgerChecked}/>
       <label htmlFor="burgerCheckbox" className={shouldNavShrink ? "nav_burger_label nav_burger_label_shrinked" : "nav_burger_label"}>
-        <img src={burger} alt="burger" className="nav_burger_icon"/>
+        <img ref={burgerNode} src={burger} alt="burger" className="nav_burger_icon"/>
       </label>
+
       <div className="nav_top">
         <Link to="/" className={shouldNavShrink ? "nav_logo_container nav_logo_container_shrinked" : "nav_logo_container"}>
           <img src={logo} alt="logo" className={shouldNavShrink ? "nav_logo_icon nav_logo_icon_shrinked" : "nav_logo_icon"}/>
@@ -54,16 +67,23 @@ function LoggedInNavigation(props) {
         <ProfileInfo/>
       </div>
 
-      <div ref={node} className={shouldNavShrink ? "nav_links_container nav_links_container_shrinked" : "nav_links_container"}>
+      <div ref={navNode} className={shouldNavShrink ? "nav_links_container nav_links_container_shrinked" : "nav_links_container"}>
         <div className={shouldNavShrink ? "nav_links nav_links_shrinked" : "nav_links"}>
-          <Link to="/" className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Strona główna</Link>
-          <Link to="/articles" className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Artykuły<span>/</span>Quizy</Link>
-          <Link to="/forum" className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Forum</Link>
-          <Link to="/profile" className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Profil</Link>
-          <Link to="/" onClick={props.signOut} className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Wyloguj</Link>
+
+          <NavLink exact to="/" onClick={() => setBurgerChecked(!burgerChecked)} activeStyle={activeStyle} className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Strona główna</NavLink>
+         
+          <NavLink exact to="/articles" onClick={() => setBurgerChecked(!burgerChecked)} activeStyle={activeStyle} className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Artykuły<span>/</span>Quizy</NavLink>
+          
+          <NavLink exact to="/forum" onClick={() => setBurgerChecked(!burgerChecked)} activeStyle={activeStyle} className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Forum</NavLink>
+          
+          <NavLink exact to="/profile" onClick={() => setBurgerChecked(!burgerChecked)} activeStyle={activeStyle} className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Profil</NavLink>
+          
+          <NavLink exact to="/" onClick={props.signOut} className={shouldNavShrink ? "nav_links_item nav_links_item_shrinked" : "nav_links_item"}>Wyloguj</NavLink>
+        
         </div>
-        <div className="nav_decor"></div>
+        <div className="nav_decor"/>
       </div>
+
     </div>
   )
 }
