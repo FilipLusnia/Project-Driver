@@ -1,7 +1,10 @@
 .nav{
     width: 100%;
     max-width: 100vw;
-    display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
+    display: flex;   
     flex-direction: column;
     align-items: center;
     height: 200px;
@@ -40,6 +43,9 @@
 }
 .nav_top{
     display: flex; 
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -54,6 +60,9 @@
 }
 .nav_logo_container{
     display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
     align-items: center;
     justify-content: space-between;
     height: 120px;
@@ -137,6 +146,9 @@
     font-size: 55px;
     line-height: 30px;
     display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
     justify-content: center;
     flex-direction: column;
 
@@ -147,6 +159,9 @@
 }
 .nav_links_container{
     display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -183,6 +198,9 @@
 }
 .nav_links{
     display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
     justify-content: center;
     margin-top: 15px;
     max-width: 100%;
@@ -207,6 +225,9 @@
     text-decoration: none;
     color: white;
     display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
     justify-content: center;
     max-height: 20px;
     white-space: nowrap;
@@ -291,6 +312,9 @@
 .profileinfo_container{
     text-transform: uppercase;
     display: flex;
+    display: -webkit-box; 
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
     justify-content: space-around;
     align-items: center;
     width: 210px;

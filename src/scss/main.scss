@@ -20,11 +20,14 @@
 
 html{
     font-family: 'Ropa Sans', sans-serif;
+    height: -webkit-fill-available;
 }
 
 body{
     background-color: rgb(20, 20, 20);
     color: white;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 .splash_screen{
