@@ -181,6 +181,10 @@
         top: 0;
         justify-content: flex-end;
     }
+
+    @media(max-width: 500px){
+        height: 400px;
+    }
 }
 .nav_links_container_shrinked{
     position: absolute;
@@ -197,7 +201,7 @@
     }
 
     @media(max-width: 500px){
-        height: 370px;
+        height: 270px;
     }
 }
 .nav_links{
