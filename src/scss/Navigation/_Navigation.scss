@@ -34,11 +34,18 @@
     height: 200px;
     animation: appear 0.8s ease-out;
     transform: translate(0, -60%);
+    -webkit-transform: translate(0, -60%);
     flex-direction: row;
 
     @keyframes appear {
-        from {transform: translate(0, -100%);}
-        to {transform: translate(0, -60%);}
+        from {
+            transform: translate(0, -100%);
+            -webkit-transform: translate(0, -100%);
+        }
+        to {
+            transform: translate(0, -60%);
+            -webkit-transform: translate(0, -60%);
+        }
     }
 }
 .nav_top{
@@ -372,6 +379,7 @@
 }
 .nav_burger:checked ~ .nav_burger_label{
     transform: rotate(-90deg) rotateX(180deg);
+    -webkit-transform: rotate(-90deg) rotateX(180deg);
 }
 .nav_burger:checked ~ .nav_links_container{
     @media(max-width: 900px){
@@ -381,10 +389,12 @@
 .nav_burger:checked ~ .nav_links_container_shrinked{
     @media(max-width: 900px){
         transform: translate(0, 70%);
+        -webkit-transform: translate(0, 70%);
     }
 
     @media(max-width: 500px){
         transform: translate(0, 70%);
+        -webkit-transform: translate(0, 70%);
     }
 }
 .nav_burger_label{
