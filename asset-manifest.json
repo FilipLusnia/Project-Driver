@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Project-Driver/static/css/main.29652a72.chunk.css",
+    "main.css": "/Project-Driver/static/css/main.e0066331.chunk.css",
     "main.js": "/Project-Driver/static/js/main.37dd13de.chunk.js",
     "main.js.map": "/Project-Driver/static/js/main.37dd13de.chunk.js.map",
     "runtime-main.js": "/Project-Driver/static/js/runtime-main.a850686e.js",
@@ -8,9 +8,9 @@
     "static/js/2.dd6cae98.chunk.js": "/Project-Driver/static/js/2.dd6cae98.chunk.js",
     "static/js/2.dd6cae98.chunk.js.map": "/Project-Driver/static/js/2.dd6cae98.chunk.js.map",
     "index.html": "/Project-Driver/index.html",
-    "precache-manifest.002bcc809b861522656809f73415dd59.js": "/Project-Driver/precache-manifest.002bcc809b861522656809f73415dd59.js",
+    "precache-manifest.cf2df2a1cee18448cd2eca1888fb396a.js": "/Project-Driver/precache-manifest.cf2df2a1cee18448cd2eca1888fb396a.js",
     "service-worker.js": "/Project-Driver/service-worker.js",
-    "static/css/main.29652a72.chunk.css.map": "/Project-Driver/static/css/main.29652a72.chunk.css.map",
+    "static/css/main.e0066331.chunk.css.map": "/Project-Driver/static/css/main.e0066331.chunk.css.map",
     "static/js/2.dd6cae98.chunk.js.LICENSE.txt": "/Project-Driver/static/js/2.dd6cae98.chunk.js.LICENSE.txt",
     "static/media/PD-logo.svg": "/Project-Driver/static/media/PD-logo.055932a0.svg",
     "static/media/main.scss": "/Project-Driver/static/media/register-background.42e0cd40.jpg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.a850686e.js",
     "static/js/2.dd6cae98.chunk.js",
-    "static/css/main.29652a72.chunk.css",
+    "static/css/main.e0066331.chunk.css",
     "static/js/main.37dd13de.chunk.js"
   ]
 }
