@@ -1,4 +1,4 @@
-### Demo
+# Demo
 
 Want to try this app? Click [here].
 
