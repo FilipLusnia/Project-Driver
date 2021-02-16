@@ -7,9 +7,6 @@ import {connect} from 'react-redux';
 import {compose} from 'redux';
 import {firestoreConnect} from 'react-redux-firebase';
 
-import firebase from 'firebase/app';
-import 'firebase/storage';
-
 import Navigation from '../Navigation/Navigation';
 import Footer from '../Navigation/Footer';
 import {sendComment} from '../Redux/Actions/forumActions';
@@ -20,19 +17,12 @@ import Loader from 'react-loader-spinner';
 function ChosenArticle(props) {
 
   const history = useHistory();
-  const storage = firebase.storage();
 
   const [commentText, setCommentText] = useState(true);
-  const [url, setUrl] = useState();
 
   const {articles, fbauth} = props;
   const articleName = props.match.params.articlename;
   const currentArticle = articles?.[articleName];
-
-  if(currentArticle){
-    storage.ref(`article-photos/${currentArticle.img}`).getDownloadURL()
-    .then(url => setUrl(url))
-  }
 
   const handleChange = e => {
     setCommentText(e.target.value);
@@ -57,11 +47,11 @@ function ChosenArticle(props) {
       <Navigation/>
       <div>
         {
-        (currentArticle && url) ?
+        (currentArticle && currentArticle.img) ?
           <div className="chosen_article_container">
             <h1 className="chosen_article_title">{currentArticle.title}</h1>
             <h2 className="chosen_article_thumbtext">{currentArticle.thumbText}</h2>
-            <img src={url} alt="cover" className="chosen_article_img"></img>
+            <img src={currentArticle.img} alt="cover" className="chosen_article_img"></img>
             <p className="chosen_article_source"> 
               Tekst arytkułu pochodzi z tej strony: <a href={currentArticle?.src} target="_blank" rel="noopener noreferrer">link</a>
             </p>
